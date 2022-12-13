@@ -1,15 +1,15 @@
-##Base API URL : ```https://639869fbfe03352a94d003fc.mockapi.io```
+## Base API URL : ```https://639869fbfe03352a94d003fc.mockapi.io```
 
 
-###GET ---->  `${baseURL}/products`
+### GET ---->  `${baseURL}/products`
 
-###GET ---->  `${baseURL}/products/${id}`
+### GET ---->  `${baseURL}/products/${id}`
 
-###POST ---->  `${baseURL}/products`
+### POST ---->  `${baseURL}/products`
 
-###PUT ---->  `${baseURL}/products/${id}`
+### PUT ---->  `${baseURL}/products/${id}`
 
-###DELETE ---->  `${baseURL}/products/${id}`
+### DELETE ---->  `${baseURL}/products/${id}`
 
 
 ### fertile-secretary-6594
