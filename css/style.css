@@ -1,0 +1,27 @@
+.productQuickbuy {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    background-color: #333;
+    border-style: none;
+    padding: 12px;
+    color: #fff;
+    border-radius: 0;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.productQuickbuy:hover{
+    background-color: #28bdb7;
+    font-weight: 300;
+    text-decoration: none;
+    border: 2px solid white;
+}
