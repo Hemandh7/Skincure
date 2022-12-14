@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Address</title>
+    <link rel="stylesheet" href="./css/checkout.css" />
+    
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    
+    <div id="container">
+      <div>
+        <p>Add your delivery address</p>
+        <p>* Required fields</p>
+        <form action="">
+          <div id="addform">
+            <div id="name">
+              <div>
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" required />
+              </div>
+              <div>
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" required />
+              </div>
+            </div>
+            <label for="country">Country / region *</label>
+            <select name="" id="country" required>
+              <option value="India">India(USD$)</option>
+              <option value="Australia">Australia(AUD$)</option>
+              <option value="Bangladesh">Bangladesh(USD$)</option>
+              <option value="Canada">Canada(CAD$)</option>
+              <option value="USA">USA(USD$)</option>
+            </select>
+            <label for="">Address *</label>
+            <input type="text" id="address" required />
+            <input type="text" id="address2" />
+            <div id="locality">
+              <div>
+                <label for="">City *</label>
+                <input type="text" id="city" required />
+              </div>
+              <div>
+                <label for="">State</label>
+                <input type="text" id="state" required />
+              </div>
+            </div>
+            <label for="">Postal or zip code *</label>
+            <input type="text" id="zipCode" required />
+            <div id="phnNum">
+              <div>
+                <label for="">Country Calling Code *</label>
+                <select name="" id="countryCall" required>
+                  <option value="+91">+91</option>
+                  <option value="+61">+61</option>
+                  <option value="+880">+880</option>
+                  <option value="+1">+1</option>
+                  <option value="+1">+1</option>
+                </select>
+              </div>
+              <div>
+                <label for="">Phone *</label>
+                <input type="num" id="mobile" required />
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" checked="true" />
+              <label for="">Use as billing address</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="summary">
+        <p>Summary</p>
+        <div id="subTotal">
+          <div>Subtotal</div>
+          <div id="stprice"></div>
+        </div>
+        <div id="delivery">
+          <div>Delivery</div>
+          <div id="delCharge"></div>
+        </div>
+        <div id="total">
+          <div>Total</div>
+          <div>
+            <div id="tprice"></div>
+            <p>Import duties included</p>
+          </div>
+        </div>
+        <button id="checkOut">Save and Continue</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+

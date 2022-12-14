@@ -1,0 +1,100 @@
+*{
+    font-family: "Lato", Helvetica, Arial, sans-serif;  
+}
+#cart-head{
+    display: flex;
+    width:95%;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+#cart-head>div{
+    width:30%;
+}
+#cart-head>button{
+    display: flex;
+    width:25%;
+    font-size: 15px;
+    align-items: center;
+    background-color: black;
+    color: white;
+    justify-content: space-around;
+}
+#cart-head>button>div>img{
+    width: 100%;
+}
+#cart-head>button>div{
+    width: 15%;
+}
+#cart-head>button:hover{
+    background-color: #28bdb7;
+    font-weight: 300;
+    text-decoration: none;
+    border: 2px solid white;
+}
+#cart-head>div>h1{
+    font-size: 50px;
+}
+.gift{
+    border: 1px solid;
+    display:flex;
+    margin: 15px;
+    align-items: center;
+    color:green;
+    background-color: rgb(224, 238, 224);
+    padding:5px;
+}
+.gift>div{
+    width:3%; 
+    margin-right: 5px;
+    
+}
+.gift>div>img{
+    width:100%;
+}
+#coupon{
+    padding-left: 100px;
+}
+#coupon>input{
+    font-size: 19px;
+    padding:10px;
+    padding-right: 30px;
+}
+#coupon>button{
+    font-size: 20px;
+    padding-left: 20px;
+    padding:10px;
+}
+#shop{
+    font-size: 15px;
+    padding: 10px;
+    border: 0px;
+    background-color: rgb(233, 230, 230);
+}
+#pay{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#pay>div{
+    border: 1px solid;
+    width:6%;
+    height:50px;
+    margin-left: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+   
+}
+#pay>div>img{
+    width:100%;
+}
+#headline{
+    text-align: center;
+}
+
+
+
+    
