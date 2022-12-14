@@ -8,4 +8,3 @@
 ### DELETE ---->  `${baseURL}/products/${id}`
 
 ### Eveyone create daily branche
-### Before pushing to code make sure To ```Make a pull Request``` to avoid conflicts
