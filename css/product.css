@@ -3,35 +3,30 @@ body {
   color: #2e3337;
 }
 
-.outline {
-  border: 1px solid red;
-  width: 300px;
-}
+/* ----------------Js render file --------------> */
 
 .product-cards {
   padding: 20px 10px;
-
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.product-cards > div {
+.product-cards>div {
   margin: 10px auto;
   padding-bottom: 20px;
 }
+
 .product-image-div {
-    margin: auto;
-    width: 70%;
+  margin: auto;
 }
 
-.product-image-div > img {
-    width: 100%;
-    display: flex;
-    margin: auto;
-    margin-top: -20px;
+.product-image-div>img {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  margin-top: -20px;
 }
 
-
-.product-cards-fav > div {
+.product-cards-fav>div {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -59,12 +54,120 @@ body {
   word-break: break-word;
 }
 
-.right-product-container {
-    width: 50%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    padding: 10px;
+.product-container-reder {
+  width: 100%;
+  margin: 30px auto 50px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
+/* ------------------------------> */
+
+
+
+/* ------------product page css------------------> */
+
+
+.padding-class{
+  padding: 10px;
+}
+.red {
+  border: 1px solid red;
+}
+
+.blue {
+  border: 1px solid blue;
+}
+
+.green {
+  border: 1px solid green;
+}
+
+.product-container {
+  width: 80%;
+  margin: auto;
+}
+
+.product-container>div {
+  margin: 20px auto;
+
+}
+
+.product-container-banner {
+  width: 90%;
+  background-color: #2e3337;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.product-container-banner:hover {
+  background-color: white;
+}
+
+.product-container-banner-text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.product-container-banner-text:hover {
+  color: #2e3337;
+}
+
+.product-sub-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.product-container-left {
+  width: 20%;
+  margin: 50px auto;
+  height: 50vh;
+
+}
+
+
+/* <------------right side-----------> */
+.product-container-right {
+  width: 75%;
+  margin: 50px auto;
+
+}
+.product-container-right-heading>p {
+  font-size: 0.7rem;
+}
+
+.REPLAY {
+  font-weight: bold;
+}
+
+.sorting-pegination-div {
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: space-between;
+}
+
+.select-tag {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+.select-tag>option {
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+.product-container-right-bottom-pegination {
+  display: flex;
+  justify-content: flex-end;
 }

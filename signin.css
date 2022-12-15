@@ -6,7 +6,8 @@ body{
     justify-content: center;
     font-size: 18px;
     background-color: #fffdfd;
-
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    color: #2e3337;
 }
 
 .container{
