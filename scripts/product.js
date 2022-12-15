@@ -51,7 +51,7 @@ function getCard(data) {
                     <button class="product-discount-button">25% off with code RREPLAY</button>
                 </div>
                 <div class="product-price">
-                    <span class="product-price">${ele.price}</span>
+                    <span class="product-price">$${ele.price}</span>
                 </div>
                 <div class="product-button">
                     <button class="productQuickbuy">Quick Buy</button>
