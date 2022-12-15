@@ -72,12 +72,12 @@
     border: 0px;
     background-color: rgb(233, 230, 230);
 }
-#pay{
+#cart-pay{
     display:flex;
     justify-content: center;
     align-items: center;
 }
-#pay>div{
+#cart-pay>div{
     border: 1px solid;
     width:6%;
     height:50px;
@@ -88,13 +88,309 @@
     border-radius: 10px;
    
 }
-#pay>div>img{
+#cart-pay>div>img{
     width:100%;
 }
-#headline{
+#cart-headline{
     text-align: center;
 }
+#cart-cards {
+    padding: 20px 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  
+  #cart-cards > div {
+    margin: 10px auto;
+    padding-bottom: 20px;
+  }
+  #cart-image-div {
+      margin: auto;
+      width: 70%;
+  }
+  
+  #cart-image-div > img {
+      width: 100%;
+      display: flex;
+      margin: auto;
+      margin-top: -20px;
+  }
+  
+  
+  #cart-cards-fav > div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  #cart-price {
+    font-family: "Lato" sans-serif;
+    font-size: 21px;
+    line-height: 1.2;
+    color: #2e3337;
+    font-weight: 700;
+  }
+  
+  #cart-title {
+    font-family: "Lato", sans-serif;
+    height: 30px;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #2e3337;
+    font-weight: 400;
+    text-align: left;
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    word-break: break-word;
+  }
+  
+#cart-recomend {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 10px;
+}
+.productQuickbuy {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    background-color: #333;
+    border-style: none;
+    padding: 12px;
+    color: #fff;
+    border-radius: 0;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    transition: 0.2s;
+}
+.product-discount-button {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    border-radius: 0;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    width: 80%;
+    transition: 0.2s;
+    border: 1px solid black;
+}
+.productQuickbuy:hover{
+    background-color: #28bdb7;
+    font-weight: 300;
+    text-decoration: none;
+}
 
-
+/* appending part table */
+#cartContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid red; */
+  }
+  
+  #heading {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px;
+  }
+  
+  #heading > h1 {
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    color: #222222;
+  }
+  
+  #heading > a {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #222222;
+  }
+  
+  #importFrom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #222222;
+    border-bottom: 1px solid #222222;
+  }
+  #importFrom p > span {
+    font-weight: 600;
+  }
+  #productContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+  }
+  #pcart {
+    display: flex;
+  }
+  #pCartdiv {
+    display: flex;
+  }
+  #pCartImg {
+    width: 8%;
+    margin: auto;
+  }
+  #pCartImg > img {
+    width: 100%;
+  }
+  #pDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+    width: 20%;
+    margin: auto;
+  }
+  #pDesc > :nth-child(2) {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    color: #222222;
+    font-weight: 600;
+  }
+  #pDesc > :nth-child(1) {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    color: #727272;
+  }
+  #pDesc > :nth-child(3) {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    color: #222222;
+  }
+  #pPriceDiv {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: auto;
+  }
+  
+  #pPriceDiv > :nth-child(1) {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    color: #222222;
+    font-weight: 600;
+  }
+  
+  #pPriceDiv > :nth-child(2) {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    color: #222222;
+  }
+  #pQuantDiv {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: auto;
+  }
+  
+  #pQuantDiv > :nth-child(1) {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    color: #222222;
+    font-weight: 600;
+  }
+  #pQuantDiv > :nth-child(2) {
+    width: 30%;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    color: #222222;
+    font-weight: 600;
+  }
+  .removeBtn {
+    width: 3%;
+    height: 3%;
+    margin: auto;
+    border: none;
+    background-color: #ffffff;
+  }
+  .removeBtn > img {
+    width: 100%;
+  }
+  #summary {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: auto;
+    padding: 10px;
+  }
+  #summary > :nth-child(1) {
+    font-size: 19px;
+    line-height: 26px;
+    font-weight: 600;
+    color: #222222;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  #subTotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222222;
+    margin-bottom: 10px;
+  }
+  
+  #delivery {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222222;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #222222;
+  }
+  
+  #total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222222;
+    margin-bottom: 10px;
+  }
 
     
