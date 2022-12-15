@@ -40,9 +40,9 @@ document.querySelector("form").addEventListener("submit", (e) => {
     //     registeration();
         
     // // }
-    // if(validForm(obj)){
-    //     console.log(obj)
-    // } 
+    if(validForm(obj)){
+        console.log(obj)
+    } 
     registeration(obj);
 });
 
