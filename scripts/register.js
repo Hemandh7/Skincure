@@ -17,7 +17,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
 
     let obj = {
-        'name' : document.querySelector("#name").value,
+        'username' : document.querySelector("#name").value,
         'email' : document.querySelector("#email").value,
         'confirmEmail' : document.querySelector("#confirm-email").value,
         'password' : document.querySelector("#password").value,
