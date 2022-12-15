@@ -126,5 +126,15 @@ body {
 }
 /* <------------right side-----------> */
 .product-container-right-heading>p{
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+}
+.REPLAY{
+  font-weight: bold;
+}
+.sorting-pegination-div{
+  display: flex;
+  justify-content: space-between;
+}
+.sorting-pegination-div>div{
+  width: 30%;
 }
