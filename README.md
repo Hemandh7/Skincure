@@ -20,3 +20,19 @@ inside css -> `body` selector :
     font-family: "Lato", Helvetica, Arial, sans-serif;
     color: #2e3337;
 }`
+
+let randomColor = Math.floor(Math.random()*16777215).toString(16);----> '#'+randomColor
+
+------------------------------------------------------------->
+window.location.href = "";
+
+------------------------------------------------------------->
+ @media all and (min-width: 768px) and (max-width: 1024px) Large screen 
+ @media all and (min-width: 481px) and (max-width: 767px)   medium screen
+ @media all and (max-width: 480px) small screen
+------------------------------------------------------------->
+ Object.key(obj).length;
+ 
+------------------------------------------------------------->
+
+------------------------------------------------------------->
