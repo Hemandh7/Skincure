@@ -1,38 +1,35 @@
-let baseURL = 'https://639869fbfe03352a94d003fc.mockapi.io'
+let baseURL = "https://639869fbfe03352a94d003fc.mockapi.io";
 
-async function fetchData(){
-    try {
-        let response = await fetch(`${baseURL}/products`,{
-            method : "GET",
-            headers : {
-                "Content-Type":"application/json"
-            }
-        })
-        if(response.ok){
-            let product_data = await response.json();
-            console.log(product_data);
-            renderData(product_data)
-        }else{
-            console.dir(response)
-        }
-    } catch (error) {
-        console.log(error);
+async function fetchData() {
+  try {
+    let response = await fetch(`${baseURL}/products`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.ok) {
+      let product_data = await response.json();
+      console.log(product_data);
+      renderData(product_data);
+    } else {
+      console.dir(response);
     }
+  } catch (error) {
+    console.log(error);
+  }
+  
 }
-
+// onload -------------------->
 window.addEventListener("load", () => {
-    fetchData();
+  fetchData();
 });
-
-
-
-
 
 // ------------------------------------------> rendering part
 // willl make arr of cards
 function getCard(data) {
-    let formatedData = data.map((ele) => {
-        return `
+  let formatedData = data.map((ele) => {
+    return `
                 <div class="product-cards" id ="${ele.id}" >
                 <div class=" product-cards-fav">
                     <div>
@@ -61,12 +58,11 @@ function getCard(data) {
 
 
         `;
-    });
-    return formatedData.join("");
+  });
+  return formatedData.join("");
 }
-// /will renderData data 
-function renderData(data){
-    let product_container = document.querySelector('.right-product-container')
-    product_container.innerHTML = getCard(data)
+// /will renderData data
+function renderData(data) {
+  let product_container = document.querySelector(".right-product-container");
+  product_container.innerHTML = getCard(data);
 }
-// callingthe fun

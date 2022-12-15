@@ -2,15 +2,10 @@ body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   color: #2e3337;
 }
-
-.outline {
-  border: 1px solid red;
-  width: 300px;
-}
+/* ----------------Js render file --------------> */
 
 .product-cards {
   padding: 20px 10px;
-
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -19,17 +14,16 @@ body {
   padding-bottom: 20px;
 }
 .product-image-div {
-    margin: auto;
-    width: 70%;
+  margin: auto;
+  width: 70%;
 }
 
 .product-image-div > img {
-    width: 100%;
-    display: flex;
-    margin: auto;
-    margin-top: -20px;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  margin-top: -20px;
 }
-
 
 .product-cards-fav > div {
   width: 100%;
@@ -60,11 +54,77 @@ body {
 }
 
 .right-product-container {
-    width: 50%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    padding: 10px;
+  width: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
 
+/* ------------------------------> */
+
+
+
+/* ------------product page css------------------> */
+.red {
+  border: 1px solid red;
+  padding: 20px;
+}
+.blue {
+  border: 1px solid blue;
+  padding: 20px;
+}
+.green {
+  border: 1px solid green;
+  padding: 20px;
+}
+.product-container {
+  width: 80%;
+  margin: auto;
+}
+.product-container>div{
+  margin: 20px auto;
+  
+}
+.product-container-banner {
+  width: 80%;
+  padding: 10px;
+  background-color: #2e3337;
+  text-align: center;
+  transition: 0.2s;
+}
+.product-container-banner:hover {
+  background-color: white;
+}
+.product-container-banner-text{
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.product-container-banner-text:hover{
+  color: #2e3337;
+}
+.product-sub-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+.product-container-left {
+  width: 25%;
+  margin:50px auto;
+  height: 50vh;
+  
+}
+.product-container-right {
+  width: 65%;
+  margin:50px auto;
+  height: 50vh;
+  
+}
+/* <------------right side-----------> */
+.product-container-right-heading>p{
+  font-size: 0.8rem;
 }
