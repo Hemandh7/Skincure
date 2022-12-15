@@ -2,7 +2,7 @@ let baseURL = "https://639869fbfe03352a94d003fc.mockapi.io";
 
 async function fetchData() {
   try {
-    let response = await fetch(`${baseURL}/products`, {
+    let response = await fetch(`${baseURL}/products?p=1&l=9`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -63,6 +63,6 @@ function getCard(data) {
 }
 // /will renderData data
 function renderData(data) {
-  let product_container = document.querySelector(".right-product-container");
+  let product_container = document.querySelector(".product-container-reder");
   product_container.innerHTML = getCard(data);
 }

@@ -1,5 +1,8 @@
 ## fertile-secretary-6594
 
+# API docs : 
+https://www.npmjs.com/package/json-server
+------------------------------------------------------------->
 ## Base API URL : ```https://639869fbfe03352a94d003fc.mockapi.io```
 ### GET ---->  `${baseURL}/products`
 ### GET ---->  `${baseURL}/products/${id}`
@@ -33,6 +36,4 @@ window.location.href = "";
 ------------------------------------------------------------->
  Object.key(obj).length;
  
-------------------------------------------------------------->
-
 ------------------------------------------------------------->
