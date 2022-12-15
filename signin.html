@@ -5,29 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="signin.css">
 </head>
 <body>
     <div class=container>
         <div class="container1">
-            <h2>Existing Customers</h2>
-            <h4>* Email address</h4>
-            <input type="text" id="login-user-username" class="u-full-width" />
-            <h4>* Password</h4>
-            <input type="password" id="login-user-passowrd" class="u-full-width" />
-            <p><a href="">FORGOTTEN YOUR PASSWORD?</a></p>
-            <button id="login-user" class="u-full-width button button-primary">Sign In</button>    
+            
+                
+            <form autocomplete="on">
+                <h2>Existing Customers</h2>
+                <p>
+                    <label for="email" class="email" data-icon="u" > * Email Address </label>
+                    <input id="email" name="email" required="required" type="text"/>
+                </p>
+                <p>
+                    <label for="password" class="youpasswd" data-icon="p"> * Password </label>
+                    <input id="password" name="password" required="required" type="password" />
+                </p>
+                <p>
+                    FORGOTTEN YOUR PASSWORD?
+                </p>
+                <input type="submit" value="SIGN IN" />
+          <p>or,Continue with</p>   
+            </form>
         </div>
 
         <div class="container2">
             <h2>New Customers</h2>
             
-            <button id="login-user" class="u-full-width button button-primary">Continue</button>    
-        </div>
+            <button id="register-btn" onclick="register()" class="u-full-width button button-primary">Continue</button>    
+         
 
     </div>
     
 
-    <script src="signin.js"></script>
+    <script src="./scripts/signin.js"></script>
 </body>
 </html>
