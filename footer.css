@@ -1,0 +1,59 @@
+#footerconnect{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: 140px;
+    margin: auto;
+}
+#footerconnect>div{
+  width: 48%;
+  text-align: left;
+}
+#icons {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    
+  }
+  #icons div {
+    /* border: 1px solid red; */
+    width: 40px;
+    height: 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+    margin: auto;
+    gap: 5px;
+  }
+  #icons div img {
+    width: 100%;
+    margin: auto;
+    gap: 20px;
+  }
+ 
+  #signup {
+    border: 1px solid #257cff;
+    margin: auto;
+    border: 1px solid black;
+    width: 15%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    background-color: #333333;
+    color: white;
+    margin-left: 60px;
+  }
+  #signup:hover {
+    background-color: #28bdb7;
+    color: #333333;
+  }
+  #end{
+    margin-top: 80px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+  }
