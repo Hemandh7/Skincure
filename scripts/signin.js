@@ -2,7 +2,7 @@ var redirect = document.querySelector("#mybtn").addEventListener("click", regist
 
 function registeration() 
 {
-    window.location.href = "./register.html";
+    window.location.href = '/routes/register.html'
 }
 
 let baseURL =  `https://639869fbfe03352a94d003fc.mockapi.io`;
