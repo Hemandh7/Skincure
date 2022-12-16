@@ -43,8 +43,7 @@
   z-index: auto;
 }
 #logodiv {
-  width: 240px;
-  padding: 20px;
+  
 }
 #searchbox {
   /* border: 1px solid black; */
@@ -324,6 +323,7 @@ vertical-align: middle;
   gap: 20px;
   justify-content: space-between;
   padding: 10px;
+  margin: auto;
 }
 .proimg {
   width: 100%;
@@ -395,13 +395,12 @@ color: #333333;
 }
 .resslot6 {
   display: flex;
-  height: 200px;
-  width: 90%;
-  margin: auto;
-  gap: 20px;
+  justify-content: space-evenly;
+  width: 70%;
+  margin: 50px auto;
 }
 .brandlogoimg {
-  width: 100%;
+  width: 50%;
   align-items: center;
   text-align: center;
   margin-bottom: 60px;
