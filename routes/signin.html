@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="../css/signin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="/resources/favicon.png" type="image/x-icon">
@@ -14,23 +14,37 @@
 <body>
     <div class=container>
         <div class="container1">
-            <h2>Existing Customers</h2>
-            <h4>* Email address</h4>
-            <input type="text" id="login-user-username" class="u-full-width" />
-            <h4>* Password</h4>
-            <input type="password" id="login-user-passowrd" class="u-full-width" />
-            <p><a href="">FORGOTTEN YOUR PASSWORD?</a></p>
-            <button id="login-user" class="u-full-width button button-primary">Sign In</button>    
+            
+                
+            <form autocomplete="on">
+                <h2>Existing Customers</h2>
+                <p>
+                    <label for="email"> * Email Address </label>
+                    <input id="email" name="email" required="required" type="text"/>
+                </p>
+                <p>
+                    <label for="password"> * Password </label>
+                    <input id="password" name="password" required="required" type="password" />
+                </p>
+                <p id="forgot">
+                    FORGOTTEN YOUR PASSWORD?
+                </p>
+                <input type="submit" value="SIGN IN" />
+          <p class="or">or, Continue with</p>  
+          <div class="facebook-google">
+            
+              <button class="fb_logo"><img src="https://www.freeiconspng.com/thumbs/facebook-logo-png/facebook-transparent-logo-png-0.png" alt="">Facebook</button>
+              <button class="google_logo"><img src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515358_10512.png" alt="">Google</button>
+            
+          </div> 
+            </form>
         </div>
 
         <div class="container2">
             <h2>New Customers</h2>
             
-            <button id="login-user" class="u-full-width button button-primary">Continue</button>    
-        </div>
-
-    </div>
-    
-    <script src="/scripts/signin.js" type="module"></script>
+            <button id="mybtn" >Continue</button>    
+    </div>   
 </body>
 </html>
+<script src="./scripts/signin.js" type="module"></script>

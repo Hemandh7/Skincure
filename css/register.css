@@ -61,3 +61,49 @@ input[type="submit"]:hover {
     font-weight: bold;
     text-decoration: underline;
 }
+
+.facebook-google{
+    width: 95%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    }
+    .fb_logo,.google_logo{
+        width:200px;
+        background-color: white;
+        color:rgb(126, 126, 126);
+        text-transform:none;
+        font-weight: bold;
+        text-align: center;
+        font-size: 15px;
+        border: 1px solid rgb(221, 219, 219);
+        
+    
+    }
+    .google_logo:hover{
+        background-color: white;
+        cursor: pointer;
+    }
+    .fb_logo:hover{
+        background-color: white;
+        cursor: pointer;
+    }
+    img{
+        width:20%;
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+
+    hr {
+        border: 1;
+        width: 98%;
+        color: #10100f;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    p{
+        margin-bottom: 20px;
+    }
+

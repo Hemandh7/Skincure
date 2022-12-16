@@ -16,37 +16,66 @@ body{
 
 .container1{
 
-    width:300px;
-    max-width:300px;
+    width:320px;
+    max-width:320px;
     margin: 1rem;
     padding: 2rem;
-    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
 }
 
 .container2{
 
-    width:300px;
+    width:320px;
     height:140px;
-    max-width:300px;
+    max-width:320px;
     margin: 1rem;
     padding: 2rem;
-    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+
 }
+p{
+    font-size: 14px;
+    letter-spacing:0.5px;
+    font-weight: bold;
+
+}
+
 
 input{
 height: 38px;
 width:300px;
   padding: 6px 10px; 
-  background-color: #fff;
-  border: 1px solid #D1D1D1;
+  border: 1px solid #cdc3c3;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+    background: #1a1b1c;
+    border: 0;
+    color: white;
+    font-size: 16px;
+    border-radius: 0px;
+   
+}
+input[type="submit"]:hover {
+    background: teal;
+    color: #2e3337;
 }
 
 a{
     text-decoration: none;
     color: black;
+}
+
+#forgot{
+    font-size: 14px;
+    margin-top: 30px;
+    text-decoration: underline;
+    letter-spacing:0.5px;
+    font-weight: 100;
 }
 
 button{
@@ -62,7 +91,7 @@ button{
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #2e3337;
+  background-color: #1a1b1c;
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box;
@@ -72,4 +101,49 @@ button:hover{
     color: black;
     
 }
+
+.or{
+    margin-top: 30px;
+    font-weight: 100;
+    letter-spacing:0.5px;
+    font-size: 14px;
+
+    
+}
+.facebook-google{
+width:300px;
+height:40px;
+display: flex;
+text-align: center;
+justify-content: space-between;
+margin-top: 30px;
+}
+.fb_logo,.google_logo{
+    width:145px;
+    background-color: white;
+    color:rgb(126, 126, 126);
+    text-transform:none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid rgb(221, 219, 219);
+
+}
+.google_logo:hover{
+    background-color: white;
+}
+.fb_logo:hover{
+    background-color: white;
+}
+img{
+    width:20%;
+    margin-right: 5px;
+    margin-top: 10px;
+    
+    
+}
+
+
+
+
 
