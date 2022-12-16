@@ -41,20 +41,20 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
     // // }
     // if(validForm(obj)){
-    //     console.log(obj)
+    //    registeration(obj);
     // } 
-    registeration(obj);
+      registeration(obj);
 });
 
 // --------------- Form Validation------------------
 
 function validForm(obj) {
-    if (obj.name == "") {
+    if (obj.username == "") {
         document.getElementById("name").innerHTML = "Please fill the name";
         return false;
     }
-    if (obj.name.length <= 4 || obj.name.length > 15) {
-        document.getElementById("name").innerHTML = "Name length should be between 2 and 20";
+    if (obj.username.length <= 4 || obj.username.length > 15) {
+        document.getElementById("name").innerHTML = "Name length should be between 4 and 15";
         return false;
     }
 
@@ -68,8 +68,8 @@ function validForm(obj) {
         document.getElementById("confirm-email").innerHTML = "Please confirm email";
         return false;
     }
-    if (obj.email != con_email) {
-        document.getElementById("email").innerHTML = " Email does not match";
+    if (obj.email != obj.confirmEmail) {
+        document.getElementById("email").innerHTML = "Email does not match";
         return false;
     }
 
@@ -77,8 +77,8 @@ function validForm(obj) {
         document.getElementById("password").innerHTML = "Please fill the password";
         return false;
     }
-    if (obj.password.length <= 7 || password.length > 12) {
-        document.getElementById("password").innerHTML = "Password should be in between 6 and 15";
+    if (obj.password.length <= 7 || obj.password.length > 12) {
+        document.getElementById("password").innerHTML = "Password should be in between 7 and 12";
         return false;
     }
 
@@ -91,7 +91,7 @@ function validForm(obj) {
             "Password does not match";
         return false;
     }
-    if (mobile_number == "") {
+    if (obj.mobile_number == "") {
         document.getElementById("phone_number").innerHTML = "Please fill the number";
         return false;
     }
@@ -130,7 +130,7 @@ async function registeration(obj){
 
             let register_request=await res.json();
             if(res.ok){
-              window.location.href="../sign.html"
+              window.location.href="signin.html"
             // console.log(register_request)
             }
             else{
