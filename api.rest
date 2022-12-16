@@ -1,0 +1,23 @@
+###
+GET https://639869fbfe03352a94d003fc.mockapi.io/products?p=1&l=9
+###
+GET https://639869fbfe03352a94d003fc.mockapi.io/products/1
+###
+GET https://639869fbfe03352a94d003fc.mockapi.io/wishlist
+###
+DELETE  https://639869fbfe03352a94d003fc.mockapi.io/wishlist/11
+###
+POST   https://639869fbfe03352a94d003fc.mockapi.io/wishlist
+Content-Type: application/json
+
+    {
+        "id": '4',
+        "image": 'https://static.thcdn.com/images/xsmall/webp//productimg/original/13885104-6704996676979558.jpg',
+        "title": 'Molton Brown Festive Bauble Gift Set', 
+        "price": 40,
+        "Description": 'This holiday season, discover the gift of deeply c…and
+        impurities for a soft and
+        glowing complexion.'
+
+    }
+
