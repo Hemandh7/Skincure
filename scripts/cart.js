@@ -131,11 +131,19 @@ const getCart = async () => {
       prodquant.setAttribute("type", "number");
       prodquant.setAttribute("min", "1");
       prodquant.setAttribute("value", "1");
-      //console.log("prodquant:", typeof(prodquant.value));
+     
+      
     let pqaunt = document.createElement("p");
       pqaunt.innerText = "Quantity";
       quantdiv.append(pqaunt, prodquant);
-      subtotal=subtotal+(Number(el.price) * Number(prodquant.value));
+      prodquant.addEventListener('click',()=>{
+        subtotal=subtotal+(Number(el.price) * Number(prodquant.value))
+        stPrice.innerText = subtotal
+        console.log(prodquant.value,subtotal);
+        let totalPrice = document.querySelector("#tprice");
+      totalPrice.innerText = subtotal + 24;
+        
+      })
       //console.log("subtotal:", subtotal);
       let removeBtn = document.createElement("button");
       removeBtn.innerHTML =
