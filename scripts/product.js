@@ -1,5 +1,5 @@
 let baseURL = "https://639869fbfe03352a94d003fc.mockapi.io";
-import {brands_function} from "../resources/refine.js"
+import { brands_function } from "../resources/refine.js"
 
 
 document.querySelector('.brands').innerHTML = brands_function()
@@ -85,17 +85,34 @@ function renderData(data) {
       add_to_fav(product_id);
     });
   }
-  // input tag
+  // -------------------------> filtering data
+  // all input tag
   let all_input = document.querySelectorAll("input");
   for (let btn of all_input) {
     btn.addEventListener("click", (event) => {
       console.log(event.path[1].innerText);
       let sort_url =
-      "https://639869fbfe03352a94d003fc.mockapi.io/products?sortBy=price&order=aesc&p=1&l=24";
-       fetchSortedData(sort_url);
+        "https://639869fbfe03352a94d003fc.mockapi.io/products?sortBy=price&order=aesc&p=1&l=24";
+      fetchSortedData(sort_url);
     });
   }
+  // ---------------------> productQuickbuy
+  let all_quick_btn = document.querySelectorAll('.productQuickbuy')
+  for (let btn of all_quick_btn) {
+    btn.addEventListener("click", (event) => {
+      let product_id = event.path[2].id;
+      // console.log(getProduct(product_id).then(data => console.log(data)));
+      alert('afslkjd')
+
+    });
+  }
+  console.log(all_quick_btn);
+
+
 }
+
+
+
 
 // -------------------------> add to favrite
 let add_to_fav = async (product_id) => {
@@ -104,7 +121,7 @@ let add_to_fav = async (product_id) => {
     let product = await getProduct(product_id);
     // product = await JSON.stringify(product);
     console.log(product);
-    
+
     let add_to_fav_res = await fetch(`${baseURL}/wishlist`, {
       method: "POST",
       headers: {
@@ -119,7 +136,8 @@ let add_to_fav = async (product_id) => {
   }
 };
 
-// will get the product form server
+
+// get one product 
 let getProduct = async (id) => {
   try {
     let product_res = await fetch(`${baseURL}/products/${id}`, {
@@ -186,6 +204,5 @@ async function fetchSortedData(sort_url) {
   }
 }
 
-// ---------------------> catorgey
 
 
