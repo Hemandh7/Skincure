@@ -2,7 +2,7 @@ var redirect = document.querySelector("#mybtn").addEventListener("click", regist
 
 function registeration() 
 {
-    window.location.href = '/routes/register.html'
+    window.location.href = '../routes/register.html'
 }
 
 let baseURL =  `https://639869fbfe03352a94d003fc.mockapi.io`;
@@ -62,7 +62,7 @@ async function signin(obj){
         console.log(userdata);
         console.log(obj);
         if(login_request.ok){
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
         }else{
             alert("User not found.");
         }

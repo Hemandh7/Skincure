@@ -1,0 +1,42 @@
+
+
+
+.container{
+    width:100%;
+    display:flex;
+     justify-content:space-between;
+    margin-top: 200px;
+
+}
+
+.gallery{
+    width:65%;
+    border:1px solid red;
+    height:auto;
+
+}
+.details{
+    width:30%;
+    border: 2px solid blue;
+    height:auto;
+}
+.pro_img{
+    width:70%;
+    height:400px;
+    margin-bottom: 30px;
+    
+}
+hr {
+    border: 1;
+    width: 98%;
+    color: #10100f;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#container2{
+    width:98%;
+    height:400px;
+    border:1px solid black;
+}
+
