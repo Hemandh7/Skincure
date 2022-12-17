@@ -54,6 +54,28 @@ body {
   word-break: break-word;
 }
 
+
+.pop-productQuickbuy {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  background-color: #333;
+  border-style: none;
+  padding: 12px;
+  color: #fff;
+  border-radius: 0;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  transition: 0.2s;
+}
+
 .product-container-reder {
   width: 100%;
   margin: 30px auto 50px auto;
@@ -182,8 +204,7 @@ div.scroll {
 
 .quickbuy-popup{
   width: 70%;
-  height: 600px
-
+  position: absolute;
 }
 .x-logo{
   width: 30px;
@@ -224,4 +245,15 @@ div.scroll {
   padding: 0  30px;
   justify-content: space-between;
   align-items: baseline;
+}
+
+.pop-image>img{
+  display: flex;
+  margin: auto;
+}
+
+div.popup-scroll {
+  height: 90vh;
+  overflow: auto;
+  text-align:justify;
 }
