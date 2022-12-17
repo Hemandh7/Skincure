@@ -468,3 +468,9 @@
   #wishbtn>div>img{
     width:100%;
   }    
+
+
+  .master-div{
+    width: 60%;
+    margin: auto;
+  }
