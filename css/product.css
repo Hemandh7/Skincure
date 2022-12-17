@@ -175,3 +175,53 @@ div.scroll {
   display: flex;
   justify-content: flex-end;
 }
+
+
+
+/* pop up */
+
+.quickbuy-popup{
+  width: 70%;
+  height: 600px
+
+}
+.x-logo{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: .5s;
+}
+.x-logo:hover{
+  rotate: 90deg;
+}
+.quickbuy-popup-header{
+  display: flex;
+  padding: 20px 20px 0 20px;
+  justify-content: space-between;
+}
+.whathehell{
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+}
+.quckbuy-btn{
+  display: flex;
+}
+.quckbuy-img ,quckbuy-shoping-btn{
+  width: 30%;
+}
+.quckbuy-des,quckbuy-cart-btn{
+ width: 40%;
+}
+.quckbuy-shoping-btn{
+  width: 60%;
+}
+.quckbuy-cart-btn{
+ width: 40%;
+}
+.cart-deatils{
+  display: flex;
+  padding: 0  30px;
+  justify-content: space-between;
+  align-items: baseline;
+}
