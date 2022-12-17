@@ -130,7 +130,7 @@ async function registeration(obj){
 
             let register_request=await res.json();
             if(res.ok){
-              window.location.href="signin.html"
+              window.location.href="../routes/signin.html"
             // console.log(register_request)
             }
             else{
