@@ -90,6 +90,7 @@
 }
 #cart-pay>div>img{
     width:100%;
+    border-radius: 10px;
 }
 #cart-headline{
     text-align: center;
@@ -97,6 +98,7 @@
 #cart-cards {
     padding: 20px 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+     
   }
   
   #cart-cards > div {
@@ -204,7 +206,7 @@
 #cartContainer {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin: auto;
     /* border: 1px solid red; */
   }
@@ -258,7 +260,9 @@
     padding: 5px;
   }
   #pcart {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
   }
   #pCartdiv {
     display: flex;
@@ -275,7 +279,7 @@
     flex-direction: column;
     justify-content: center;
     /* align-items: flex-start; */
-    width: 20%;
+    width: 40%;
     margin: auto;
   }
   #pDesc > :nth-child(2) {
@@ -341,8 +345,8 @@
     font-weight: 600;
   }
   .removeBtn {
-    width: 3%;
-    height: 3%;
+    width: 4%;
+    height: 4%;
     margin: auto;
     border: none;
     background-color: #ffffff;
@@ -351,9 +355,8 @@
     width: 100%;
   }
   #summary {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
+    display: grid;
+    width: 80%;
     margin: auto;
     padding: 10px;
   }
@@ -387,10 +390,87 @@
   #total {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 22px;
     color: #222222;
     margin-bottom: 10px;
+    font-weight: bolder;
   }
+  #cart-gift{
+    width: 100%;
+  }
+  .collapsible {
+    background-color:rgb(243, 239, 239);
+    color:black;
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color:rgb(243, 239, 239);
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .gift-content {
+    padding: 0 10px;
+    display: none;
+    overflow: hidden;
+    background-color:rgb(243, 239, 239);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  #arrow{
+    width:8%;
+  }
+  #arrow>img{
+    width:100%;
+  }
+  #giftcard{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+  #giftcard>div{
+    margin:1%;
+  }
+  #giftcard>div:nth-child(1){
+    width:35%;
+  }
+  #giftcard>div:nth-child(1)>img{
+    width:100%;
+  }
+  #giftcard>div:nth-child(3){
+    width:10%;
+  }
+  #giftcard>div:nth-child(3)>img{
+    width:100%;
+  }
+  wishbtn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 50%;
+  }
+  #wishbtn>div:nth-child(1){
+    width: 10%;
+  }
+  #wishbtn>div:nth-child(2){
+    width: 80%;
+  }
+  #wishbtn>div>img{
+    width:100%;
+  }    
 
-    
+
+  .master-div{
+    width: 60%;
+    margin: auto;
+  }

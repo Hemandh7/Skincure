@@ -12,6 +12,7 @@ async function fetchData(){
             let product_data = await response.json();
             console.log(product_data);
             renderData(product_data)
+            renderData2(product_data)
         }else{
             console.dir(response);
         }
@@ -109,17 +110,20 @@ const getCart = async () => {
       prodDescDiv.setAttribute("id", "pDesc");
       let prodName = document.createElement("p");
       prodName.innerText = el.title;
-      prodDescDiv.append(prodName);
+      let wishbutton=document.createElement("button");
+      wishbutton.setAttribute('id',"wishbtn")
+      wishbutton.innerHTML=`
+      `
+      prodDescDiv.append(prodName,wishbutton);
         let prodPriceDiv = document.createElement("div");
        prodPriceDiv.setAttribute("id", "pPriceDiv");
       let prodPrice = document.createElement("p");
       prodPrice.setAttribute("type", "number");
       prodPrice.innerText =el.price;
-      console.log("price:",el.price);
+      //console.log("price:",el.price);
   
-      let importDuty = document.createElement("p");
-      importDuty.innerText = "(Import duties included)";
-      prodPriceDiv.append(prodPrice,importDuty);
+      
+      prodPriceDiv.append(prodPrice);
       let quantdiv = document.createElement("div");
       quantdiv.setAttribute("id", "pQuantDiv");
       let prodquant = document.createElement("input");
@@ -127,11 +131,19 @@ const getCart = async () => {
       prodquant.setAttribute("type", "number");
       prodquant.setAttribute("min", "1");
       prodquant.setAttribute("value", "1");
-      //console.log("prodquant:", typeof(prodquant.value));
+     
+      
     let pqaunt = document.createElement("p");
       pqaunt.innerText = "Quantity";
       quantdiv.append(pqaunt, prodquant);
-      subtotal=subtotal+(+el.price * Number(prodquant.value));
+      prodquant.addEventListener('click',()=>{
+        subtotal=subtotal+(Number(el.price) * Number(prodquant.value))
+        stPrice.innerText = subtotal
+        console.log(prodquant.value,subtotal);
+        let totalPrice = document.querySelector("#tprice");
+      totalPrice.innerText = subtotal + 24;
+        
+      })
       //console.log("subtotal:", subtotal);
       let removeBtn = document.createElement("button");
       removeBtn.innerHTML =
@@ -162,15 +174,61 @@ const getCart = async () => {
   const removeProduct = async (el) => {
     try {
       let id = el.id;
-      let res = await fetch(`${baseURL}/cart/${id}`,{
+      //console.log(id,"id")
+      let res = await fetch(`https://639869fbfe03352a94d003fc.mockapi.io/cart/${id}`,{
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
           },
         });
+        //console.log(res);
       window.location.reload();
       getCart();
     } catch (err) {
       console.log(err);
     }
   };
+
+
+  var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+
+function getItems2(data){
+    let cartData2=data.map((el,i)=>{
+        while(i>3&&i<10){
+        return `
+        <div id="giftcard">
+        <div>
+          <img src=${el.image} alt="">
+        </div>
+        <div>
+          <h4>${el.title}</h4>
+        </div>
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9nu_ZHuDon1GTaXeSIS6NeAjO91a4W_r6-Q&usqp=CAU" alt="">
+        </div>
+      </div>  
+        `;
+        };
+    });
+    return cartData2.join("");
+}
+
+
+function renderData2(data){
+    let gifts = document.querySelector('.gift-content')
+    gifts.innerHTML = getItems2(data)
+}

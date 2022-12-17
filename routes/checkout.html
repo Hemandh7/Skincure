@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Address</title>
-    <link rel="stylesheet" href="./css/checkout.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/resources/favicon.png" type="image/x-icon">
     <link
@@ -30,10 +30,7 @@
                 <label for="firstName">First Name *</label>
                 <input type="text" id="firstName" required />
               </div>
-              <div>
-                <label for="lastName">Last Name *</label>
-                <input type="text" id="lastName" required />
-              </div>
+            
             </div>
             <label for="country">Country / region *</label>
             <select name="" id="country" required>
@@ -46,16 +43,6 @@
             <label for="">Address *</label>
             <input type="text" id="address" required />
             <input type="text" id="address2" />
-            <div id="locality">
-              <div>
-                <label for="">City *</label>
-                <input type="text" id="city" required />
-              </div>
-              <div>
-                <label for="">State</label>
-                <input type="text" id="state" required />
-              </div>
-            </div>
             <label for="">Postal or zip code *</label>
             <input type="text" id="zipCode" required />
             <div id="phnNum">
@@ -81,26 +68,6 @@
           </div>
         </form>
       </div>
-      <div id="summary">
-        <p>Summary</p>
-        <div id="subTotal">
-          <div>Subtotal</div>
-          <div id="stprice"></div>
-        </div>
-        <div id="delivery">
-          <div>Delivery</div>
-          <div id="delCharge"></div>
-        </div>
-        <div id="total">
-          <div>Total</div>
-          <div>
-            <div id="tprice"></div>
-            <p>Import duties included</p>
-          </div>
-        </div>
-        <button id="checkOut">Save and Continue</button>
-      </div>
-    </div>
   </body>
 </html>
 
