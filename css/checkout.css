@@ -5,17 +5,17 @@
     box-sizing: border-box;
   }
   #container {
-    display: flex;
-    width: 90%;
+   width: 50%;
     margin: auto;
     margin-top: 50px;
-    justify-content: space-between;
+    border: 1px solid red;
   }
   
   #container > :nth-child(1) {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
+    
   }
   #container > :nth-child(1) > :nth-child(1) {
     font-size: 22px;
@@ -23,6 +23,7 @@
     text-align: start;
     color: #000000;
     margin-bottom: 24px;
+    
   }
   #container > :nth-child(1) > :nth-child(2) {
     font-size: 14px;
@@ -34,13 +35,12 @@
   #addform {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 50%;
     box-sizing: border-box;
+    border: 2px solid;
+    padding: 20px;
   }
-  #name {
-    display: flex;
-    column-gap: 20px;
-  }
+  
   #locality {
     display: flex;
     column-gap: 20px;
@@ -64,63 +64,10 @@
   
   input[type="checkbox"] {
     padding-left: 10px;
-  }
-  #summary {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    /* margin: auto; */
-    padding: 10px;
-  }
-  #summary > :nth-child(1) {
-    font-size: 19px;
-    line-height: 26px;
-    font-weight: 600;
-    color: #222222;
-    text-align: left;
-    margin-bottom: 10px;
-  }
-  #subTotal {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    line-height: 22px;
-    color: #222222;
-    margin-bottom: 10px;
+    
   }
   
-  #delivery {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    line-height: 22px;
-    color: #222222;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #222222;
-  }
-  
-  #total {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    line-height: 22px;
-    color: #222222;
-    margin-bottom: 10px;
-  }
-  
-  #checkOut {
-    width: 100%;
-    font-size: 16px;
-    line-height: 22px;
-    text-align: center;
-    color: white;
-    background-color: #222222;
-    border: 1px solid #222222;
-    padding: 14px 32px 12px;
-    border-radius: 4px;
-  }
-  
-  #checkOut:hover {
-    cursor: pointer;
+  #firstName{
+    width:100%;
   }
   
