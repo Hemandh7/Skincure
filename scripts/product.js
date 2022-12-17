@@ -1,4 +1,8 @@
 let baseURL = "https://639869fbfe03352a94d003fc.mockapi.io";
+import {brands_function} from "../resources/refine.js"
+
+
+document.querySelector('.brands').innerHTML = brands_function()
 
 async function fetchData() {
   try {
@@ -56,6 +60,9 @@ function getCard(data) {
                 <div class="product-button">
                     <button class="productQuickbuy">Quick Buy</button>
                 </div>
+                <div class="product-reviews">
+                        <p>⭐⭐⭐⭐&#160(234)</p>
+                </div>
             </div>
 
 
@@ -76,6 +83,16 @@ function renderData(data) {
       let product_id = event.path[3].id;
       console.log(product_id);
       add_to_fav(product_id);
+    });
+  }
+  // input tag
+  let all_input = document.querySelectorAll("input");
+  for (let btn of all_input) {
+    btn.addEventListener("click", (event) => {
+      console.log(event.path[1].innerText);
+      let sort_url =
+      "https://639869fbfe03352a94d003fc.mockapi.io/products?sortBy=price&order=aesc&p=1&l=24";
+       fetchSortedData(sort_url);
     });
   }
 }
@@ -168,3 +185,7 @@ async function fetchSortedData(sort_url) {
     console.log(error);
   }
 }
+
+// ---------------------> catorgey
+
+
