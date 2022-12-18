@@ -172,7 +172,7 @@ body {
 
 .sorting-pegination-div {
   display: flex;
-  font-size: 1.1rem;
+  align-items: baseline;
   justify-content: space-between;
 }
 
@@ -274,4 +274,9 @@ div.popup-scroll {
 }
 .wishlistloading{
 left: 30%;
+}
+
+/* ----------------notification------------------ */
+.notification-loding{
+  left: 24%;
 }
