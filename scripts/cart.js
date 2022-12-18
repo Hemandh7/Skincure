@@ -1,5 +1,14 @@
 let baseURL = 'https://639869fbfe03352a94d003fc.mockapi.io'
 
+let checkbtn=document.querySelector('#checkbtn');
+checkbtn.addEventListener('click',()=>{
+  window.location.href="checkout.html"
+});
+let checkbtn2=document.querySelector('#checkbtn2');
+checkbtn2.addEventListener('click',()=>{
+  window.location.href="checkout.html"
+});
+
 async function fetchData(){
     try {
         let response = await fetch(`${baseURL}/cart`,{
@@ -110,10 +119,9 @@ const getCart = async () => {
       prodDescDiv.setAttribute("id", "pDesc");
       let prodName = document.createElement("p");
       prodName.innerText = el.title;
-      let wishbutton=document.createElement("button");
+      let wishbutton=document.createElement("div");
       wishbutton.setAttribute('id',"wishbtn")
-      wishbutton.innerHTML=`
-      `
+      wishbutton.innerHTML=`<button><div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvUJ99Usooda8IJaUjA8rVWricqXc62jAasEL3wQGEoqpCGVIs_jFeva98jfTPKfxwU7A&usqp=CAU" alt=""></div> Add to wishlist</button>`
       prodDescDiv.append(prodName,wishbutton);
         let prodPriceDiv = document.createElement("div");
        prodPriceDiv.setAttribute("id", "pPriceDiv");
@@ -121,7 +129,7 @@ const getCart = async () => {
       prodPrice.setAttribute("type", "number");
       prodPrice.innerText =el.price;
       //console.log("price:",el.price);
-  
+        subtotal+=Number(el.price);
       
       prodPriceDiv.append(prodPrice);
       let quantdiv = document.createElement("div");
@@ -136,8 +144,14 @@ const getCart = async () => {
     let pqaunt = document.createElement("p");
       pqaunt.innerText = "Quantity";
       quantdiv.append(pqaunt, prodquant);
+      let prev=prodquant.value;
       prodquant.addEventListener('click',()=>{
-        subtotal=subtotal+(Number(el.price) * Number(prodquant.value))
+        if(prev-prodquant.value<0){
+            subtotal=subtotal+(Number(el.price) * Number(prodquant.value)-Number(el.price))
+        }else{
+            subtotal=subtotal-(Number(el.price) * Number(prodquant.value))
+    
+        }
         stPrice.innerText = subtotal
         console.log(prodquant.value,subtotal);
         let totalPrice = document.querySelector("#tprice");
@@ -167,6 +181,7 @@ const getCart = async () => {
       delivery: "24",
       total: subtotal + 24,
     };
+
     localStorage.setItem("cartPrice", JSON.stringify(cartPrice));
   };
   

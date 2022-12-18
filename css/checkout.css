@@ -3,71 +3,425 @@
     padding: 0;
     font-family: "Lato-Light",Helvetica,Arial,sans-serif;
     box-sizing: border-box;
+    
   }
-  #container {
-   width: 50%;
+  #checkout-main{
+    display:grid;
+    width:70%;
+    grid-template-columns: 60% 30%;
     margin: auto;
-    margin-top: 50px;
-    border: 1px solid red;
+    justify-content: space-around;
   }
-  
-  #container > :nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  #checkout-container{
+    width:100%;
+    margin: auto;
+  } 
+  #checkout-container>div{
+    margin-bottom: 50px;
+    padding:20px;
     
-  }
-  #container > :nth-child(1) > :nth-child(1) {
-    font-size: 22px;
-    line-height: 30px;
-    text-align: start;
-    color: #000000;
-    margin-bottom: 24px;
-    
-  }
-  #container > :nth-child(1) > :nth-child(2) {
-    font-size: 14px;
-    line-height: 18px;
-    text-align: start;
-    color: #222222;
-    margin-bottom: 12px;
-  }
-  #addform {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    box-sizing: border-box;
-    border: 2px solid;
+  } 
+  #checklogin{
+    margin: 20px;
     padding: 20px;
+    border: 2px solid;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: white;
+  }
+  #checklogin>div{
+    display: flex;
+    align-items: center;
+   
+  }
+  #checklogin>div:nth-child(2)>div{
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+  }
+  #checklogin h3{
+    font-size: 30px;
+  }
+  #checklogin p{
+    font-size: 20px;
+    margin: 10px;
+  }
+  #logbtn{
+    width:70%;
+    font-size: 23px;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    margin: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  #logbtn:hover{
+    background-color: #28bdb7;
+    font-weight: 300;
+    text-decoration: none;
+    border: 2px solid white;
+  }
+  #adress{
+    background: white;
+    margin:20px;
+    margin-top: 50px;
+    padding: 20px;
+    border: 2px solid;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   }
+   
+   #adress > :nth-child(1) {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     
+   }
+   #adress > :nth-child(1) > :nth-child(1) {
+     font-size: 30px;
+     line-height: 30px;
+     text-align: start;
+     color: #000000;
+     margin: 24px;
+     font-weight: bolder;
+     
+   }
+   #adress > :nth-child(1) > :nth-child(2) {
+     font-size: 20px;
+     line-height: 18px;
+     text-align: start;
+     color: #222222;
+     margin-left: 24px;
+   }
+   #addform {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     box-sizing: border-box;
+     padding: 20px;
+   }
+   
+   form label {
+     font-size: 20px;
+     line-height: 18px;
+     text-align: start;
+     color: #222222;
+     padding-bottom: 4px;
+     margin:10px;
+   }
+   form input,
+   select {
+     padding: 10px 12px;
+     margin: 10px;
+     font-size: 20px;
+     border-radius: 5px;
+   }
+   input[type="checkbox"] {
+     padding-left: 10px;
+  }
+  #firstName{
+     width:100%;
+   }
+   #addcheck{
+    width:100%;
+    
+   }
+   #deliveryopt{
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid;
+    background: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   }
+   #deliveryopt h3{
+    font-size: 30px;
+   }
+   #addcheck>input{
+    padding: 10px 12px;
+     margin: 10px;
+     width: 100%;
+     font-size: 20px;
+     border-radius: 5px;
+   }
+   #htext{
+    font-size: 18px;
+    margin:8px;
+   }
+   #subhead{
+    font-size: 22px;
+    margin:10px;
+   }
+
+   #creditcard{
+    background: white;
+    margin-top: 50px;
+    margin:20px;
+    padding: 20px;
+    border: 2px solid;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   }
+   
+   #creditcard > :nth-child(1) {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     
+   }
+   #creditcard > :nth-child(1) > :nth-child(1) {
+     font-size: 30px;
+     line-height: 30px;
+     text-align: start;
+     color: #000000;
+     margin: 24px;
+     font-weight: bolder;
+     
+   }
+   #creditcard > :nth-child(1) > :nth-child(2) {
+     font-size: 20px;
+     line-height: 18px;
+     text-align: start;
+     color: #222222;
+     margin-left: 24px;
+   }
+   #creditform {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     box-sizing: border-box;
+     padding: 20px;
+   }
+   #phnNum {
+     display: flex;
+     column-gap: 20px;
+   }
+   form label {
+     font-size: 20px;
+     line-height: 18px;
+     text-align: start;
+     color: #222222;
+     padding-bottom: 4px;
+     margin:10px;
+   }
+   form input,
+   select {
+     padding: 10px 12px;
+     margin: 10px;
+     font-size: 20px;
+     border-radius: 5px;
+   }
+   input[type="checkbox"] {
+     padding-left: 10px;
+  }
+  #creditnum,#creditname,#expiry,#creditsecurity{
+     width:100%;
+   }
+   #expiry>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   #expiry input{
+    width:100%;
+   }
+   #card-select{
+    
+    width:65%;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+   }
+   #card-select>div{
+    margin:5px;
+    padding: 5px;
+   }
+   #card-select>div>img{
+    width: 100%;
+   }
+   #submitorder{
+    width:60%;
+    height:80px;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: black;
+    color: white;
+    align-items: center;
+   }
+   #submitorder>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #submitorder>div img{
+   width:50%;
+  }
+  #submitorder>div p{
+    font-size: 25px;
+   }
+   #submitorder:hover{
+    background-color: #28bdb7;
+    font-weight: 300;
+    text-decoration: none;
+    border: 2px solid white;
+   }
+   #upi{
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   }
+   .upi-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   
-  #locality {
+  /* Hide the browser's default radio button */
+  .upi-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    margin-bottom:20px;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .upi-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .upi-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .upi-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .upi-container .checkmark:after {
+     top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+  #upi-image{
+   width:20%;
+    height:50px;
+  }
+  #upi-image>img{
+    width:90%;
+  }
+  #upi>div>div{
+    margin:20px;
+    padding:20px;
+    border-bottom: 1px solid gray;
+  }
+#append-main{
+    width:100%;
+  
+  }
+  #cart-append{
+    border:1px solid;
+  }
+  #giftcard{
     display: flex;
-    column-gap: 20px;
-  }
-  #phnNum {
-    display: flex;
-    column-gap: 20px;
-  }
-  form label {
-    font-size: 14px;
-    line-height: 18px;
-    text-align: start;
-    color: #222222;
-    padding-bottom: 4px;
-  }
-  form input,
-  select {
-    padding: 6px 12px;
+    align-items: center;
+    background-color: white;
     margin-bottom: 10px;
   }
-  
-  input[type="checkbox"] {
-    padding-left: 10px;
-    
+  #giftcard>div{
+    margin:1%;
   }
-  
-  #firstName{
+  #giftcard>div:nth-child(1){
+    width:35%;
+  }
+  #giftcard>div:nth-child(1)>img{
     width:100%;
   }
-  
+  #giftcard>div:nth-child(3){
+    width:10%;
+  }
+  #giftcard>div:nth-child(3)>img{
+    width:100%;
+  }
+
+  #page-end{
+    border-top: 2px solid;
+    text-align: center;
+    padding-bottom: 100px;
+    background-color: rgb(205, 202, 202);
+  }
+
+  @media all and (min-width: 481px) and (max-width: 767px){
+    #checkout-main{
+      display:grid;
+      width:100%;
+      grid-template-columns: repeat(1,1fr);
+      margin: auto;
+      justify-content: space-around;
+    }
+    #submitorder{
+      width:100%;
+      padding: 10px;
+      padding-bottom: 20px;
+      margin:auto;
+      display: grid;
+      grid-template-columns: 20% 80%;
+      background-color: black;
+      color: white;
+      align-items: center;
+     }
+  } 
+
+
+  @media all and (max-width: 480px) {
+    #checkout-main{
+      display:grid;
+      width:100%;
+      grid-template-columns:repeat(1,1fr);
+      margin: auto;
+      justify-content: space-around;
+    } 
+    #submitorder{
+      width:100%;
+      padding: 10px;
+      padding-bottom: 20px;
+      margin:auto;
+      display: grid;
+      grid-template-columns: 20% 80%;
+      background-color: black;
+      color: white;
+      align-items: center;
+     }
+  }

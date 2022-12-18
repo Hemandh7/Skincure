@@ -262,13 +262,14 @@
   #pcart {
     width: 100%;
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
   }
   #pCartdiv {
     display: flex;
+    padding: 5%;
   }
   #pCartImg {
-    width: 8%;
+    width: 20%;
     margin: auto;
   }
   #pCartImg > img {
@@ -281,6 +282,7 @@
     /* align-items: flex-start; */
     width: 40%;
     margin: auto;
+    padding:5%;
   }
   #pDesc > :nth-child(2) {
     font-size: 16px;
@@ -290,10 +292,10 @@
     font-weight: 600;
   }
   #pDesc > :nth-child(1) {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 18px;
     text-align: left;
-    color: #727272;
+    
   }
   #pDesc > :nth-child(3) {
     font-size: 14px;
@@ -309,7 +311,7 @@
   }
   
   #pPriceDiv > :nth-child(1) {
-    font-size: 16px;
+    font-size: 22px;
     line-height: 22px;
     text-align: left;
     color: #222222;
@@ -438,6 +440,7 @@
     align-items: center;
     background-color: white;
     margin-bottom: 10px;
+    padding:10%;
   }
   #giftcard>div{
     margin:1%;
@@ -454,23 +457,115 @@
   #giftcard>div:nth-child(3)>img{
     width:100%;
   }
-  wishbtn{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width: 50%;
+  #giftcard h4{
+    font-size: 18px;
   }
-  #wishbtn>div:nth-child(1){
-    width: 10%;
-  }
-  #wishbtn>div:nth-child(2){
-    width: 80%;
-  }
-  #wishbtn>div>img{
-    width:100%;
-  }    
+
 
 
   .master-div{
-    width: 60%;
+    width: 80%;
     margin: auto;
   }
+  #wishbtn>button{
+    display: flex;
+    width:100%;
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    background: transparent;
+}
+#wishbtn>button>div>img{
+    width: 100%;
+}
+#wishbtn>button>div{
+    width: 15%;
+}
+
+@media all and (min-width: 481px) and (max-width: 767px){
+  .master-div{
+    width: 100%;
+    margin: auto;
+  }
+  #cart-head{
+    display: flex;
+    width:100%;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+#cart-head>button{
+  display: flex;
+  width:100%;
+  font-size: 15px;
+  align-items: center;
+  background-color: black;
+  color: white;
+  justify-content: space-around;
+}
+#cart-head>div{
+  width:100%;
+}
+#cart-head>div>h1{
+  font-size: 30px;
+}
+#pcart {
+  width: 100%;
+  display: grid;
+  grid-template-columns:repeat(1,1fr)
+}
+#cart-recomend {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  padding: 10px;
+}
+}
+
+@media all and (max-width: 480px){
+  .master-div{
+    width: 95%;
+    margin: auto;
+  }
+  #cart-head{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width:100%;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+#cart-head>button{
+  display: flex;
+  width:100%;
+  font-size: 15px;
+  align-items: center;
+  background-color: black;
+  color: white;
+  justify-content: space-around;
+}
+#cart-head>div{
+  width:100%;
+}
+#cart-head>div>h1{
+  font-size: 30px;
+}
+#pcart {
+  width: 100%;
+  display: grid;
+  grid-template-columns:repeat(1,1fr)
+}
+#cart-recomend {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 20px;
+  padding: 10px;
+}
+}
