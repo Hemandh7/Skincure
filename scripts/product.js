@@ -1,11 +1,20 @@
 let baseURL = "https://639869fbfe03352a94d003fc.mockapi.io";
+import { footer } from "../components/footer.js";
 import { brands_function } from "../resources/refine.js";
 
 // ------------------> html elements
+
 let popHandler = document.querySelector(".pop-handler");
+let footerHTLM = document.querySelector("#footer");
+let brands = document.querySelector(".brands")
 
-document.querySelector(".brands").innerHTML = brands_function();
+// ------------------> export functions
+brands.innerHTML = brands_function();
+footerHTLM.innerHTML = footer();
 
+
+
+// ------------------> fetch all data functions
 async function fetchData() {
   try {
     let response = await fetch(`${baseURL}/products?p=1&l=9`, {
@@ -25,13 +34,13 @@ async function fetchData() {
     console.log(error);
   }
 }
-// onload -------------------->
+// ------------------> onloade
 window.addEventListener("load", () => {
   fetchData();
 });
 
-// ------------------------------------------> rendering part
-// willl make arr of cards
+// --------------------------------------------------------------------------------------------->rendering part
+// ------------------>willl make arr of cards
 function getCard(data) {
   let formatedData = data.map((ele) => {
     return `
@@ -72,12 +81,12 @@ function getCard(data) {
   });
   return formatedData.join("");
 }
-// /will renderData data
+// ------------------>
 function renderData(data) {
   let product_container = document.querySelector(".product-container-reder");
   product_container.innerHTML = getCard(data);
 
-  // fetching all fav button after data displayed on DOM
+  // ------------------>fetching all fav button after data displayed on DOM
 
   let all_fav_btns = document.querySelectorAll(".fav-btn");
   for (let btn of all_fav_btns) {
@@ -87,7 +96,7 @@ function renderData(data) {
       add_to_fav(product_id);
     });
   }
-  // -------------------------> filtering data
+  // ------------------>filtering data
   // all input tag
   let all_input = document.querySelectorAll("input");
   for (let btn of all_input) {
@@ -98,7 +107,7 @@ function renderData(data) {
       fetchSortedData(sort_url);
     });
   }
-  // ---------------------> productQuickbuy
+  // ------------------>productQuickbuy
   let all_quick_btn = document.querySelectorAll(".productQuickbuy");
   for (let btn of all_quick_btn) {
     btn.addEventListener("click", (event) => {
@@ -107,13 +116,13 @@ function renderData(data) {
 
       product.then((data) => {
         makePopUp(data.image, data.title, data.price);
-        localStorage.setItem('quick-data',JSON.stringify(data))
+        localStorage.setItem("quick-data", JSON.stringify(data));
       });
     });
   }
   console.log(all_quick_btn);
 }
-// -----------------------> redicrecting cart and con-shopping-btn
+// ------------------>redicrecting cart and con-shopping-btn
 function makePopUp(img, title, price) {
   popHandler.innerHTML = `
   <div class="quickbuy-popup red popup-scroll" id="quickbuy-popup">
@@ -164,8 +173,7 @@ function makePopUp(img, title, price) {
 </div>`;
 }
 
-
-// -------------------------> add to favrite
+// ------------------>add to favrite
 let add_to_fav = async (product_id) => {
   console.log(product_id);
   try {
