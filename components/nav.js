@@ -1,5 +1,6 @@
 let navbar = () => {
     return ` <div class="usd"></div>
+    <hr>
     <div id="barpart">
       <div class="header">
         <div id="logodiv">
