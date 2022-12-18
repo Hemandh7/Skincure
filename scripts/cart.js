@@ -247,3 +247,7 @@ function renderData2(data){
     let gifts = document.querySelector('.gift-content')
     gifts.innerHTML = getItems2(data)
 }
+
+import navbar from "../components/nav.js"
+let navbar_div = document.getElementById("navbar");
+navbar_div.innerHTML = navbar();
