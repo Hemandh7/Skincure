@@ -2,10 +2,12 @@ let baseURL = "https://639869fbfe03352a94d003fc.mockapi.io";
 import { footer } from "../components/footer.js";
 import { brands_function } from "../resources/refine.js";
 
+import { navbar_product } from "../components/nav.js";
+
+document.querySelector("#navbar").innerHTML = navbar_product();
 
 
 // ------------------> html elements
-
 let popHandler = document.querySelector(".pop-handler");
 let footerHTLM = document.querySelector("#footer");
 let brands = document.querySelector(".brands")
@@ -195,7 +197,7 @@ function makePopUp(img, title, price) {
 </div>`;
 
   // ------------------>redicrecting cart and con-shopping-btn
-  document.querySelector('.con-shopping').addEventListener('click', () => window.location.href = "../routes/product.html")
+  document.querySelector('.con-shopping').addEventListener('click', () =>popHandler.innerHTML = null)
   document.querySelector('.view-cart').addEventListener('click', () => window.location.href = "../routes/cart.html")
   
   // ------------------>closing and overlay button 
@@ -330,7 +332,6 @@ async function fetchSortedData(sort_url) {
 }
 
 // --------------------------> sorting feature
-// -------------->page 1 
 page1.addEventListener('click',()=>{
   fetchData(1)
 })
