@@ -107,6 +107,7 @@ function renderData(data) {
 
       product.then((data) => {
         makePopUp(data.image, data.title, data.price);
+        localStorage.setItem('quick-data',JSON.stringify(data))
       });
     });
   }
@@ -163,9 +164,6 @@ function makePopUp(img, title, price) {
 </div>`;
 }
 
-// -----------------------> redicrecting cart and con-shopping-btn
-// document.querySelector('.con-shopping').addEventListener('click',()=>window.location.href = '../routes/product.html')
-// document.querySelector('.view-cart').addEventListener('click',()=>window.location.href = '../routes/cart.html')
 
 // -------------------------> add to favrite
 let add_to_fav = async (product_id) => {
