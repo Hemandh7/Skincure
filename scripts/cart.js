@@ -11,7 +11,7 @@ checkbtn2.addEventListener('click',()=>{
 
 async function fetchData(){
     try {
-        let response = await fetch(`${baseURL}/cart`,{
+        let response = await fetch(`${baseURL}/wishlist?p=${1}&l=${10}`,{
             method : "GET",
             headers : {
                 "Content-Type":"application/json"
@@ -82,7 +82,7 @@ let cartPrice = JSON.parse(localStorage.getItem("cartPrice")) || {};
 // Get cart data function for getting the cart items from server
 const getCart = async () => {
     try {
-      let res = await fetch(`${baseURL}/cart`,{
+      let res = await fetch(`${baseURL}/wishlist?p=${1}&l=${10}`,{
         method : "GET",
         headers : {
             "Content-Type":"application/json"
@@ -248,6 +248,9 @@ function renderData2(data){
     gifts.innerHTML = getItems2(data)
 }
 
-import navbar from "../components/nav.js"
+import { footer } from "../components/footer.js";
+import {navbar} from "../components/nav.js"
 let navbar_div = document.getElementById("navbar");
 navbar_div.innerHTML = navbar();
+let footer_div=document.getElementById("footer");
+footer_div.innerHTML = footer();
