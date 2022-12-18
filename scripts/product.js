@@ -9,6 +9,11 @@ import { brands_function } from "../resources/refine.js";
 let popHandler = document.querySelector(".pop-handler");
 let footerHTLM = document.querySelector("#footer");
 let brands = document.querySelector(".brands")
+let page1=document.querySelector('.page-btn-1')
+let page2=document.querySelector('.page-btn-2')
+let page3=document.querySelector('.page-btn-3')
+let page4=document.querySelector('.page-btn-4')
+let page5=document.querySelector('.page-btn-5')
 
 
 // ------------------> export functions
@@ -18,9 +23,10 @@ footerHTLM.innerHTML = footer();
 
 
 // ------------------> fetch all data functions
-async function fetchData() {
+async function fetchData(page = 1) {
+  loading();
   try {
-    let response = await fetch(`${baseURL}/products?p=1&l=9`, {
+    let response = await fetch(`${baseURL}/products?p=${page}&l=${18}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -28,6 +34,7 @@ async function fetchData() {
     });
     if (response.ok) {
       let product_data = await response.json();
+      popHandler.innerHTML = null
       // console.log(product_data);
       renderData(product_data);
     } else {
@@ -128,30 +135,13 @@ function renderData(data) {
 
 // ------------------> make pop-up fun
 function loading (){
-
   popHandler.innerHTML = `
-  <div class="quickbuy-popup" id="quickbuy-popup">
-    <div class="quickbuy-popup-header">
-      <h3>Added to Your Cart</h3>
-      <svg class="x-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-          <path
-              d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
-      </svg>
-    </div>
-  <hr>
-  <div class="quickbuy-popup-body popup-scroll">
-      
-  <lord-icon class="loading"
-   src="https://cdn.lordicon.com/kvsszuvz.json"
-   trigger="loop"
-   colors="primary:#121331,secondary:#08a88a"
-   style="width:550px;height:550px">
-   </lord-icon>
-   </div>
-  </div>`;
-  // ------------------>closing and overlay button 
-  document.querySelector('.x-logo').addEventListener('click',()=> popHandler.innerHTML = null)
-
+  <div style="width: 100%;position: fixed;top: 1%;height: 100vh;backdrop-filter: blur(5px)" class="notification-popup" id="quickbuy-popup">
+  <lord-icon class="notification-loding" src="https://cdn.lordicon.com/kvsszuvz.json" trigger="loop"
+      colors="primary:#121331,secondary:#08a88a" style="width:450px;height:450px">
+  </lord-icon>
+  </div>
+`
 }
 
 // ------------------> make pop-up fun
@@ -228,9 +218,9 @@ let add_to_fav = async (product_id) => {
     });
     // ---------------------------------success---->
     popHandler.innerHTML = `
-  <div class="quickbuy-popup" id="quickbuy-popup">
+  <div style="background-color:rgba(255, 255, 255, 0);backdrop-filter: blur(5px)" class="quickbuy-popup" id="quickbuy-popup">
     <div class="quickbuy-popup-header">
-      <h3>Added to Your Cart</h3>
+      <h3>Added to WishList ❤</h3>
       <svg class="x-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
           <path
               d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
@@ -338,3 +328,29 @@ async function fetchSortedData(sort_url) {
     console.log(error);
   }
 }
+
+// --------------------------> sorting feature
+// -------------->page 1 
+page1.addEventListener('click',()=>{
+  fetchData(1)
+})
+page2.addEventListener('click',()=>{
+  fetchData(2)
+})
+page3.addEventListener('click',()=>{
+  fetchData(3)
+})
+page4.addEventListener('click',()=>{
+  fetchData(4)
+})
+page5.addEventListener('click',()=>{
+  fetchData(5)
+})
+
+
+
+
+
+
+// notitication
+export default loading;
