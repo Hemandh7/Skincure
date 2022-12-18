@@ -1,3 +1,6 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   color: #2e3337;
@@ -203,9 +206,23 @@ div.scroll {
 /* pop up */
 
 .quickbuy-popup{
-  width: 70%;
-  position: absolute;
+  width: 60%;
+  position: fixed;
+  top: 5%;
+  left: 20%;
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 20px;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+div.popup-scroll {
+  height: 60vh;
+  overflow: auto;
+  text-align:justify;
+}
+
 .x-logo{
   width: 30px;
   height: 30px;
@@ -252,8 +269,9 @@ div.scroll {
   margin: auto;
 }
 
-div.popup-scroll {
-  height: 90vh;
-  overflow: auto;
-  text-align:justify;
+.loading{
+  left: 24%;
+}
+.wishlistloading{
+left: 30%;
 }
