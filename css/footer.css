@@ -45,7 +45,7 @@
   width: 20%;
   padding: 10px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-bottom: 70px;
   background-color: #333333;
   color: white;
@@ -72,12 +72,12 @@
 #size > ul li {
   line-height: 2;
   color: grey;
-  margin-right: 70px;
+  /* margin-right: 55px; */
   padding-left: 0px;
   transition: padding 0.3s;
 }
 #size > ul li:hover {
-  padding-left: 10px;
+  padding-left: 5px;
   cursor: pointer;
 }
 #size h4 {
@@ -85,9 +85,13 @@
   transition: padding 0.3s;
 }
 #size h4:hover {
-  color: blue;
-  padding-left: 10px;
+  color: grey;
+  padding-left: 5px;
 }
 #foterpara {
   margin-top: 20px;
+}
+
+#size>h4{
+  margin-bottom: 40px;
 }
