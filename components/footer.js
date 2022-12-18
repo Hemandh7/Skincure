@@ -1,5 +1,6 @@
 let footer = () => {
-  return `  <hr />
+  return ` <div>
+  <hr class="footer-hr" />
   <div id="footerconnect">
     <div id="footersignup">
       <p id="foterpara">Sign up to our email list and receive 20% off your next order</p>
@@ -40,7 +41,7 @@ let footer = () => {
   </div>
   <div id="end">
     <div id="size">
-      <hr />
+      <hr class="footer-hr" />
       <h4>Help & Information</h4>
       <ul>
         <li>Customer Servide</li>
@@ -54,7 +55,7 @@ let footer = () => {
      
     </div>
     <div id="size">
-      <hr />
+      <hr class="footer-hr"/>
       <h4>About SkinStore</h4>
       <ul>
         <li>Key Workers Discount</li>
@@ -69,7 +70,7 @@ let footer = () => {
   
     </div>
     <div id="size">
-      <hr />
+      <hr class="footer-hr" />
       <h4>Legal</h4>
       <ul>
         <li>Cookie Information</li>
@@ -81,7 +82,7 @@ let footer = () => {
      
     </div>
     <div id="size">
-      <hr />
+      <hr class="footer-hr"/>
       <h4>How to Contact Us</h4>
       <ul>
         <li>Massage Us</li>
@@ -89,8 +90,10 @@ let footer = () => {
       </ul>
    
   </div>
-  
-  
+    
+</div>
+</div>
+<img class="bottom-payment" src="../images/bot-payment.png" alt="">
  `};
 
 export { footer };
