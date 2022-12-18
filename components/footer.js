@@ -1,5 +1,6 @@
 let footer = () => {
-  return `  <hr class="footer-hr" />
+  return ` <div>
+  <hr class="footer-hr" />
   <div id="footerconnect">
     <div id="footersignup">
       <p id="foterpara">Sign up to our email list and receive 20% off your next order</p>
@@ -90,8 +91,9 @@ let footer = () => {
    
   </div>
     
-  
-  
+</div>
+</div>
+<img class="bottom-payment" src="../images/bot-payment.png" alt="">
  `};
 
 export { footer };
