@@ -82,7 +82,7 @@ let cartPrice = JSON.parse(localStorage.getItem("cartPrice")) || {};
 // Get cart data function for getting the cart items from server
 const getCart = async () => {
     try {
-      let res = await fetch(`${baseURL}/wishlist?p=${1}&l=${10}`,{
+      let res = await fetch(`${baseURL}/cart?p=${1}&l=${10}`,{
         method : "GET",
         headers : {
             "Content-Type":"application/json"
