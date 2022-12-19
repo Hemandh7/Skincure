@@ -56,6 +56,7 @@ p{
     font-size: 14px;
     letter-spacing:0.5px;
     font-weight: bold;
+    margin-top: 20px;
 
 }
 
@@ -92,10 +93,13 @@ a{
 }
 
 #forgot{
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 30px;
+    margin-bottom: 10px;
     text-decoration: underline;
-    font-weight: 100;
+    font-weight: 500;
+    letter-spacing:1px;
+
 
 }
 
@@ -125,10 +129,9 @@ button:hover{
 
 .or{
     margin-top: 30px;
-    font-weight: 100;
     letter-spacing:0.5px;
     font-size: 14px;
-
+    font-weight: 500;
     
 }
 .facebook-google{
@@ -162,7 +165,7 @@ img{
     
 }
 h2{
-    padding:20px;
+    margin-bottom:30px;
 }
 
 

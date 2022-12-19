@@ -28,29 +28,44 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
 });
 
-function validForm(obj) {
-    if (obj.email == "") {
-        document.getElementById("email").innerHTML = "Please fill the email";
-        return false;
-    }
+// function validForm(obj) {
+//     if (obj.email == "") {
+//         document.getElementById("email").innerHTML = "Please fill the email";
+//         return false;
+//     }
 
-    if (obj.password == "") {
-        document.getElementById("password").innerHTML = "Please fill the password";
-        return false;
-    }
-    if (obj.password.length <= 7 || obj.password.length > 12) {
-        document.getElementById("password").innerHTML = "Password should be in between 7 and 12";
-        return false;
-    }
-    return true;
-}
+//     if (obj.password == "") {
+//         document.getElementById("password").innerHTML = "Please fill the password";
+//         return false;
+//     }
+//     if (obj.password.length <= 7 || obj.password.length > 12) {
+//         document.getElementById("password").innerHTML = "Password should be in between 7 and 12";
+//         return false;
+//     }
+//     return true;
+// }
 
 
+
+// let admin_email = document.querySelector("#email")
+// let admin_pass = document.querySelector("#password")
+// function adminPage(){
+
+//     if(admin_email == "admin" && admin_pass=="admin" )
+//     {
+//         window.location.href = "../routes/admin.html";
+//     }
+
+
+// }
 
 async function signin(obj){
+    if(obj.email =="admin" && obj.password == "admin") window.location.href = "../routes/admin.html";
+    
+    console.log(obj);
 
     try {
-        let login_request = await fetch(`${baseURL}/users`,{
+        let login_request = await fetch(`${baseURL}/users/1`,{
             method : "GET",
             // body : JSON.stringify(obj),
             headers : {
@@ -59,13 +74,17 @@ async function signin(obj){
         })
 
         let userdata = await login_request.json();
-        console.log(userdata);
+       if(userdata.email == obj.email && userdata.password == obj.password ){
+        alert('Logged-in ✅')
+        window.location.href = "../index.html"
+       }else if (userdata.email !== obj.email ){
+        alert('NO user found ❌')
+       }else{
+        alert('Wrong Password ❌')            
+        };
         console.log(obj);
-        if(login_request.ok){
-            window.location.href = "../index.html";
-        }else{
-            alert("User not found.");
-        }
+       
+       
     } catch (error) {
 		console.log(error);
         alert("wrong username or password. Please try again later.");
@@ -82,3 +101,4 @@ function stickynavbar() {
   }
 }
 window.addEventListener('scroll', stickynavbar);
+

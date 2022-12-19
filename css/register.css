@@ -90,10 +90,12 @@ input[type="submit"]:hover {
     display: flex;
     text-align: center;
     justify-content: space-between;
-    margin: 0px;
+    margin-bottom: 30px;
+    
     }
     .fb_logo,.google_logo{
         width:200px;
+        height:70px;
         background-color: white;
         color:rgb(126, 126, 126);
         text-transform:none;
@@ -123,6 +125,7 @@ input[type="submit"]:hover {
         width: 98%;
         color: #10100f;
         margin:auto;
+        
     }
 
     p{
