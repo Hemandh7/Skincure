@@ -55,7 +55,7 @@ function renderData2(data){
 let submit = document.querySelector('#submitorder');
 submit.addEventListener('click',()=>{
     alert("Order Placed");
-    window.location.href="index.html"
+    window.location.href="../index.html"
 })
 
 import {navbar} from "../components/nav.js"
