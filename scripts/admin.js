@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
         let obj = { ...item };
         return obj;
       })
-      renderCardList(employeesCardData, 'Employee list');
+      renderCardList(employeesCardData, 'Product list');
     })
 });
 
@@ -70,7 +70,7 @@ fetchwish.addEventListener("click", function () {
         let obj = { ...item };
         return obj;
       })
-      renderCardList(recipeCardData, 'Recipe list');
+      renderCardList(recipeCardData, 'Wish list');
     })
 })
 
@@ -85,14 +85,14 @@ fetchEmployeesButton.addEventListener("click", function () {
         let obj = { ...item };
         return obj;
       })
-      renderCardListusers(employeesCardData, 'Employee list');
+      renderCardListusers(employeesCardData, 'Customers list');
     })
 })
 
 
 function renderCardList(cardData, heading) {
   mainSection.innerHTML = `
-  <h1>${'Data list'}</h1>
+  <h1>${heading ? heading : 'Data list'}</h1>
   <hr>
   <div class="card-list">
     ${cardData
@@ -110,7 +110,7 @@ function renderCardList(cardData, heading) {
 }
 function renderCardListusers(cardData, heading) {
   mainSection.innerHTML = `
-  <h1>${'Data list'}</h1>
+  <h1>${heading ? heading : 'Data list'}</h1>
   <hr>
   <div class="card-list">
     ${cardData
