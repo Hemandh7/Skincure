@@ -11,7 +11,7 @@ let navbar = () => {
         <div class="center" id="searchdiv">
           <div id="searchbox">
             <div id="searchbar">
-              <a class ="a-tag" href=""><p>Search for a product or brand</p></a>
+              <a class ="a-tag" href="../routes/product.html"><p>Search for a product or brand</p></a>
 
               <img src="../images/navimg (3).png" alt="" />
             </div>
@@ -29,9 +29,9 @@ let navbar = () => {
             <div class="dropdown-content">
               <a class ="a-tag" id="logindrop" href="../routes/signin.html">Login</a>
               <a class ="a-tag" id="register" href="../routes/register.html">Register</a>
-              <a class=" a-tag operationdrop" href="">Wishlist</a>
-              <a class=" a-tag operationdrop" href="">Your Order</a>
-              <a class=" a-tag operationdrop" href="">Your Referal</a>
+              <a class=" a-tag operationdrop" href="../routes/cart.html">Wishlist</a>
+              <a class=" a-tag operationdrop" href="../routes/cart.html">Your Order</a>
+              <a class=" a-tag operationdrop" href="../routes/cart.html">Your Referal</a>
             </div>
           </div>
         </div>
@@ -97,14 +97,14 @@ let navbar_product = () => {
     <div id="barpart">
       <div class="header">
         <div id="logodiv">
-          <a class ="a-tag" id="taglogo" href=""
+          <a class ="a-tag" id="taglogo" href="../index.html"
             ><img id="logoimg" src="../images/image.png" alt=""
           /></a>
         </div>
         <div class="center" id="searchdiv">
           <div id="searchbox">
             <div id="searchbar">
-              <a class ="a-tag" href=""><p>Search for a product or brand</p></a>
+              <a class ="a-tag" href="../routes/product.html"><p>Search for a product or brand</p></a>
 
               <img src="../images/navimg (3).png" alt="" />
             </div>
@@ -120,11 +120,11 @@ let navbar_product = () => {
             />
             <p>Account</p>
             <div class="dropdown-content">
-              <a class ="a-tag" id="logindrop" href="">Login</a>
-              <a class ="a-tag" id="register" href="">Register</a>
-              <a class=" a-tag operationdrop" href="">Wishlist</a>
-              <a class=" a-tag operationdrop" href="">Your Order</a>
-              <a class=" a-tag operationdrop" href="">Your Referal</a>
+              <a class ="a-tag" id="logindrop" href="../routes/signin.html">Login</a>
+              <a class ="a-tag" id="register" href="../routes/register.html">Register</a>
+              <a class=" a-tag operationdrop" href="../routes/cart.html">Wishlist</a>
+              <a class=" a-tag operationdrop" href="../routes/cart.html">Your Order</a>
+              <a class=" a-tag operationdrop" href="../routes/product.html">Your Referal</a>
             </div>
           </div>
         </div>

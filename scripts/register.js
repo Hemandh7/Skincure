@@ -130,6 +130,7 @@ async function registeration(obj){
 
             let register_request=await res.json();
             if(res.ok){
+                alert('account created ✔')
               window.location.href="../routes/signin.html"
             // console.log(register_request)
             }

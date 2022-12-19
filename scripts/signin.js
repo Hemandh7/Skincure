@@ -20,8 +20,9 @@ document.querySelector("form").addEventListener("submit", (e) => {
 });
 
 async function signin(obj) {
-  if (obj.email == "admin" && obj.password == "admin")
-    window.location.href = "../routes/admin.html";
+  if (obj.email == "admin" && obj.password == "admin"){
+      window.location.href = "../routes/admin.html";
+  }
 
   console.log(obj);
 
