@@ -20,6 +20,11 @@ title.innerText = pdata.title;
 let description = document.querySelector('.pro_des')
 description.innerText = pdata.Description;
 
+let cartbtn  = document.querySelector('.cartbtn ')
+cartbtn.addEventListener('click',()=>{
+    window.location.href = "../routes/cart.html"
+}) 
+
 
 
 
