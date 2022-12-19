@@ -57,3 +57,7 @@ submit.addEventListener('click',()=>{
     alert("Order Placed");
     window.location.href="index.html"
 })
+
+import {navbar} from "../components/nav.js"
+let navbar_div = document.getElementById("navbar");
+navbar_div.innerHTML = navbar();
