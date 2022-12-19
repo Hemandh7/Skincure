@@ -170,16 +170,16 @@ const getCart = async () => {
       pContainer.append(prodDiv);
     });
     let stPrice = document.querySelector("#stprice");
-    stPrice.innerText = subtotal;
+    stPrice.innerText =  Math.floor(subtotal);
     let delCharge = document.querySelector("#delCharge");
     delCharge.innerText = "$24";
     let totalPrice = document.querySelector("#tprice");
-    totalPrice.innerText = subtotal + 24;
+    totalPrice.innerText =  Math.floor(subtotal) + 24;
   
     cartPrice = {
       subPrice: subtotal,
       delivery: "24",
-      total: subtotal + 24,
+      total: Math.floor(subtotal) + 24,
     };
 
     localStorage.setItem("cartPrice", JSON.stringify(cartPrice));
