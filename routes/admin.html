@@ -1,81 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Page</title>
-    <script
-      src="https://kit.fontawesome.com/24c494a6b6.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="Styles/admin.css" />
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/admin/index.css" />
+    <link rel="stylesheet" href="../css/admin/normalize.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/admin/skeleton.css" />
+    <title>Skin care</title>
   </head>
   <body>
-    <div id="nav">
-      <img
-        src="https://drive.google.com/file/d/1qXRd7cxvw3H0UP0yw0bQT93-_29hGPhP/view?usp=sharing"
-        alt=""
-      />
-      <h2>Welcome to Admin Dashboard</h2>
-      <button>LOGOUT</button>
-    </div>
-    <div id="heading">
-      <div>
-        <p><i class="fa-solid fa-users"></i></p>
-        <a href="#users"><p>Orders</p></a>
-      </div>
-      <div>
-        <p><i class="fa-solid fa-user-graduate"></i></p>
-        <a href="#enrolled"><p>Products</p></a>
-      </div>
-      <div>
-        <p><i class="fa-solid fa-computer"></i></p>
-        <a href="#online"><p>Customers</p></a>
-      </div>
-      <div>
-        <p><i class="fa-solid fa-chalkboard-user"></i></p>
-        <a href="#faculty"><p>Discounts</p></a>
-      </div>
-      <div>
-        <p><i class="fa-solid fa-building-columns"></i></p>
-        <a href="#offline"><p>Gift Carts</p></a>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <h1>Admin page</h1>
+        </div>
       </div>
 
+      <div class="row">
+        <div class="columns four sidebar-one" id="sidebar-one">
+          <button id="fetch-ingredient"  class="u-full-width button button-primary" >Prodcuts</button>
+          <button id="fetch-employees"  class="u-full-width button button-primary" >Cusomters</button>
+          <button id="fetch-wish"  class="u-full-width button button-primary" >Orders</button>
+          <hr>
 
-      <div>
-        <p><i class="fa-solid fa-graduation-cap"></i></p>
-        <a href="#companies"><p>Pricing</p></a>
+          <h4>Add Prodcuts</h4>
+          <input type="text" id="employee-name" class="u-full-width" placeholder="title" />
+          <input type="text" id="employee-image" class="u-full-width" placeholder="Image Url" />
+          <input type="number" id="employee-dept" class="u-full-width" placeholder="quantity" />
+          <input type="number" id="employee-salary" class="u-full-width" placeholder="price" />
+          <button id="add-employee" class="u-full-width button button-primary">Add Prodcuts</button>
+          <hr>
+        </div>
+        <div class="columns eight main-section" id="main-section">
+          
+        </div>
       </div>
-      <div>
-        <p><i class="fa-solid fa-graduation-cap"></i></p>
-        <a href="#companies"><p>Settings</p></a>
-      </div>
-    </div>
-    <div id="users" class="disp">
-      <h1>User Details</h1>
-    </div>
-    <hr />
-    <div id="enrolled" class="disp">
-      <h1>Enrolled Users</h1>
-    </div>
-    <hr />
-    <div id="online" class="disp">
-      <h1>Online Courses</h1>
+
     </div>
 
-    <hr />
-    <h1 class="hhead">Faculty Members</h1>
-    <div id="faculty"></div>
-    <hr />
-
-    <div id="offline" class="disp">
-      <h1>Running Offline Batches</h1>
-    </div>
-    <hr />
-    <h1 class="hhead">Top Hiring Partners</h1>
-    <div id="companies"></div>
+    <script src="../scripts/admin.js"></script>
   </body>
 </html>
-<script src="Scripts/admin.js"></script>
