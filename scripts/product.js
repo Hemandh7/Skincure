@@ -133,6 +133,20 @@ function renderData(data) {
       });
     });
   }
+  // all img tag 
+  let allImg = document.querySelectorAll(".product-image-div");
+  console.log(allImg)
+  for (let btn of allImg) {
+    btn.addEventListener("click", (event) => {
+      let product_id = event.path[2].id;
+      let product = getProduct(product_id);
+      loading()
+      product.then((data) => {
+        localStorage.setItem("quick-data", JSON.stringify(data));
+        window.location.href = "../routes/singleProduct.html"
+      });
+    });
+  }
 }
 
 // ------------------> make pop-up fun
@@ -354,4 +368,5 @@ page5.addEventListener('click',()=>{
 
 
 // notitication
-export default loading;
+export  {loading};
+export  {makePopUp};
