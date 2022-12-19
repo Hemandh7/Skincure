@@ -23,7 +23,24 @@ window.addEventListener("load", () => {
       })
       renderCardList(employeesCardData, 'Product list');
     })
+    
 });
+
+fetchIngredientsButton.addEventListener('click',()=>{
+  fetch(`${baseURL}/products`, {
+    method: 'GET'
+  })
+    .then(res => {
+      return res.json();
+    })
+    .then(data => {
+      let employeesCardData = data.map(item => {
+        let obj = { ...item };
+        return obj;
+      })
+      renderCardList(employeesCardData, 'Product list');
+    })
+})
 
 
 
@@ -100,13 +117,21 @@ function renderCardList(cardData, heading) {
         let imageURL = item.image;
         let title = item.title;
         let price = item.price;
-        let link = `#`;
+        let id = item.id;
 
-        return getAsCard(imageURL, title, price, link);
+        return getAsCard(imageURL, title, price, id);
       })
       .join("")}
   </div>
-`;
+`
+let delbtns = document.querySelectorAll('.deletebtn');
+  for(let delbtn of delbtns){
+    delbtn.addEventListener('click',(e)=>{
+      console.log(delbtn.id)
+      removeProduct(delbtn.id)
+    });
+  }
+;
 }
 function renderCardListusers(cardData, heading) {
   mainSection.innerHTML = `
@@ -118,9 +143,9 @@ function renderCardListusers(cardData, heading) {
         let imageURL = "../logo/user.gif";
         let title = item.username;
         let price = item.email;
-        let link = `#`;
+        let id = item.id;
 
-        return getAsCard(imageURL, title,price);
+        return getAsCard(imageURL, title,price,id);
       })
       .join("")}
   </div>
@@ -138,7 +163,6 @@ function parseLinkHeader(linkHeader) {
 }
 
 
-
 function getAsCard(imgSrc, title, description, link) {
   return `
     <div class="card">
@@ -154,11 +178,30 @@ function getAsCard(imgSrc, title, description, link) {
       <div class="card__item card__description">
         ${description}
       </div>
-      <a href=${link} class="card__item card__link">Read more</a>
+      <button id= ${link} style = "width: 150px; height: 40px;"  class=" deletebtn button-primary" >Delete</button>
     </div>
   </div>
 `;
 }
+
+const removeProduct = async (id) => {
+  try {
+    
+    //console.log(id,"id")
+    let res = await fetch(`https://639869fbfe03352a94d003fc.mockapi.io/products/${id}`,{
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      //console.log(res);
+    window.location.reload();
+    getCart();
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 
 
 let getData = async () => {
