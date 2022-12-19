@@ -1,10 +1,33 @@
-body {
+#navbar{
+    width:100%;
+    height:auto;
+    background: #ffffff;
+    overflow: hidden;
+
+}
+#navbar img{
+    width: 80px;;
+    height: 80px;
+    margin-left: 100px;;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.cont {
     font-family: "Lato-Light",Helvetica,Arial,sans-serif;
     background: hwb(0 91% 8%);
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-content:space-around;
+    line-height: 1.2;
+    line-height: 2;
+    word-spacing: 1;
+    margin-top: 100px;
+    
 }
 
 a {
@@ -26,7 +49,7 @@ form {
     flex-direction: column;
 }
 
-input {
+form > input {
     display: block;
     margin: 5px 0 25px;
     font-size: 14px;
@@ -67,7 +90,7 @@ input[type="submit"]:hover {
     display: flex;
     text-align: center;
     justify-content: space-between;
-    margin-top: 10px;
+    margin: 0px;
     }
     .fb_logo,.google_logo{
         width:200px;
@@ -99,11 +122,11 @@ input[type="submit"]:hover {
         border: 1;
         width: 98%;
         color: #10100f;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin:auto;
     }
 
     p{
         margin-bottom: 20px;
+        margin-top: 30px;
     }
 
