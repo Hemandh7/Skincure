@@ -4,7 +4,7 @@ let navbar = () => {
     <div id="barpart">
       <div class="header">
         <div id="logodiv">
-          <a class ="a-tag" id="taglogo" href="../index.html"
+          <a class ="a-tag" id="taglogo" href="./index.html"
             ><img id="logoimg" src="../images/image.png" alt=""
           /></a>
         </div>
@@ -50,20 +50,20 @@ let navbar = () => {
         </div>
       </div>
       <hr />
-      <div class="dropbar">
-        <div>Brands</div>
-        <div>Holiday Gifts</div>
-        <div>Sale</div>
-        <div>Skin Care</div>
-        <div>Hair</div>
-        <div>MakeUp</div>
-        <div>Bath&Body</div>
-        <div>Fragrance</div>
-        <div>Self-Care</div>
-        <div>Tools</div>
-        <div>New & Trending</div>
-        <div>Build a Routine</div>
-        <div>Blog</div>
+        <div class="dropbar">
+        <a href=""><div>Brand</div></a>
+        <a href=""><div>Gifts</div></a>
+        <a href=""><div>Sale</div></a>
+        <a href="../routes/product.html"><div>Skin Care</div></a>
+        <a href="../routes/product.html"><div>Hair</div></a>
+        <a href="../routes/product.html"><div>Makeup</div></a>
+        <a href="../routes/product.html"><div>Bath&Body</div></a>
+        <a href="../routes/product.html"><div>Fragrance</div></a>
+        <a href="../routes/product.html"><div>Self-Care</div></a>
+        <a href="../routes/product.html"><div>Tools</div></a>
+        <a href="../routes/product.html"><div>New & Trending</div></a>
+        <a href="../routes/product.html"><div>Build a Routine</div></a>
+        <a href="../routes/product.html"><div>Blog</div></a>
       </div>
     </div>
 

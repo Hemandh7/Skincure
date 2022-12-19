@@ -4,7 +4,7 @@ let footer = () => {
   <div id="footerconnect">
     <div id="footersignup">
       <p id="foterpara">Sign up to our email list and receive 20% off your next order</p>
-      <div id="signup">SIGN UP</div>
+      <a href="/routes/register.html"><div id="signup">SIGN UP</div></a>
     </div>
     <div>
       <p>Connect with us</p>
