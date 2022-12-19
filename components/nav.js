@@ -27,7 +27,7 @@ let navbar = () => {
             />
             <p>Account</p>
             <div class="dropdown-content">
-              <a class ="a-tag" id="logindrop" href="">Login</a>
+              <a class ="a-tag" id="logindrop" href="../routes/signin.html">Login</a>
               <a class ="a-tag" id="register" href="">Register</a>
               <a class=" a-tag operationdrop" href="">Wishlist</a>
               <a class=" a-tag operationdrop" href="">Your Order</a>
@@ -45,7 +45,7 @@ let navbar = () => {
               style="width: 20px; height: 20px"
             />
             <!-- <p>Cart</p> -->
-            <a class ="a-tag" href="">Cart</a>
+            <a class ="a-tag" href="../routes/cart.html">Cart</a>
           </div>
         </div>
       </div>
