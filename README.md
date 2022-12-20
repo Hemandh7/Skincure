@@ -10,11 +10,11 @@ https://www.npmjs.com/package/json-server
 ### PUT ---->  `${baseURL}/products/${id}`
 ### DELETE ---->  `${baseURL}/products/${id}`
 
-#LLD 
+# LLD 
 ![workflow](https://user-images.githubusercontent.com/87657007/208612132-f006506f-8e6f-44bc-82d0-249807dc4cd4.png)
 
-
-###mediaquries
+# ------------------------------------------------------------->
+### mediaquries
  @media all and (min-width: 768px) and (max-width: 1024px) Large screen
  
  @media all and (min-width: 481px) and (max-width: 767px)   medium screen
