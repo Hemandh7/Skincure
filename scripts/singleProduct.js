@@ -10,7 +10,7 @@ image.src = pdata.image;
 
 
 let price = document.querySelector('.pro_price')
-price.innerText = pdata.price;
+price.innerText = "$ "+pdata.price;
 // console.log()
 
 let title = document.querySelector('.pro_title')

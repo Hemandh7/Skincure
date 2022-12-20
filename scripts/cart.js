@@ -174,7 +174,7 @@ const getCart = async () => {
     let delCharge = document.querySelector("#delCharge");
     delCharge.innerText = "$24";
     let totalPrice = document.querySelector("#tprice");
-    totalPrice.innerText =  Math.floor(subtotal) + 24;
+    totalPrice.innerText =  "$ " + (Math.floor(subtotal) + 24);
   
     cartPrice = {
       subPrice: subtotal,
