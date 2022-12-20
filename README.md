@@ -2,8 +2,8 @@
 
 # API docs : 
 https://www.npmjs.com/package/json-server
-------------------------------------------------------------->
-## Base API URL : `https://639869fbfe03352a94d003fc.mockapi.io`
+
+### Base API URL : `https://639869fbfe03352a94d003fc.mockapi.io`
 ### GET ---->  `${baseURL}/products`
 ### GET ---->  `${baseURL}/products/${id}`
 ### POST ---->  `${baseURL}/products`
@@ -13,7 +13,6 @@ https://www.npmjs.com/package/json-server
 # LLD 
 ![workflow](https://user-images.githubusercontent.com/87657007/208612132-f006506f-8e6f-44bc-82d0-249807dc4cd4.png)
 
-# ------------------------------------------------------------->
 ### mediaquries
  @media all and (min-width: 768px) and (max-width: 1024px) Large screen
  
