@@ -1,6 +1,6 @@
 ## fertile-secretary-6594
 # https://skincure.netlify.app/
-# API docs : 
+# API docs : https://mockapi.io/projects/639869fbfe03352a94d003fd
 https://www.npmjs.com/package/json-server
 
 ### Base API URL : `https://639869fbfe03352a94d003fc.mockapi.io`
