@@ -152,13 +152,14 @@ function renderData(data) {
 // ------------------> make pop-up fun
 function loading (){
   popHandler.innerHTML = `
-  <div style="width: 100%;position: fixed;top: 1%;height: 100vh;backdrop-filter: blur(5px)" class="notification-popup" id="quickbuy-popup">
+  <div style="width: 100%;position: fixed;top: 0%;height: 100vh;backdrop-filter: blur(5px)" class="notification-popup" id="quickbuy-popup">
   <lord-icon class="notification-loding" src="https://cdn.lordicon.com/kvsszuvz.json" trigger="loop"
       colors="primary:#121331,secondary:#08a88a" style="width:450px;height:450px">
   </lord-icon>
   </div>
 `
 }
+
 
 // ------------------> make pop-up fun
 function makePopUp(img, title, price) {
