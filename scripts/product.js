@@ -61,13 +61,14 @@ function getCard(data) {
                     <div>
                     <lord-icon
                     class="fav-btn"
+                    id ="${ele.id}" 
                     src="https://cdn.lordicon.com/pnhskdva.json"
                     trigger="hover"
                     style="width:40px;height:40px">
                     </lord-icon>
                     </div>
                 </div>
-                <div class="product-image-div">
+                <div id ="${ele.id}"  class="product-image-div">
                     <img src=${ele.image}
                         alt="${ele.title}">
                 </div>
@@ -81,7 +82,7 @@ function getCard(data) {
                     <span class="product-price">$${ele.price}</span>
                 </div>
                 <div class="product-button">
-                    <button class="productQuickbuy">Quick Buy</button>
+                    <button class="productQuickbuy" id ="${ele.id}">Quick Buy</button>
                 </div>
                 <div class="product-reviews">
                         <p>⭐⭐⭐⭐&#160(234)</p>
@@ -103,7 +104,8 @@ function renderData(data) {
   let all_fav_btns = document.querySelectorAll(".fav-btn");
   for (let btn of all_fav_btns) {
     btn.addEventListener("click", (event) => {
-      let product_id = event.path[3].id;
+      console.log(btn.id);
+      let product_id = btn.id;
       loading()
       add_to_fav(product_id);
     });
@@ -124,7 +126,7 @@ function renderData(data) {
   for (let btn of all_quick_btn) {
     btn.addEventListener("click", (event) => {
       loading();
-      let product_id = event.path[2].id;
+      let product_id = btn.id;
       let product = getProduct(product_id);
       product.then((data) => {
         makePopUp(data.image, data.title, data.price);
@@ -135,11 +137,11 @@ function renderData(data) {
   }
   // all img tag 
   let allImg = document.querySelectorAll(".product-image-div");
-  console.log(allImg)
   for (let btn of allImg) {
     btn.addEventListener("click", (event) => {
-      let product_id = event.path[2].id;
+      let product_id = btn.id;
       let product = getProduct(product_id);
+      console.log(product_id, product);
       loading()
       product.then((data) => {
         localStorage.setItem("quick-data", JSON.stringify(data));
